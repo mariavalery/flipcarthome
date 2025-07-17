@@ -2,6 +2,8 @@ import { FaSearch, FaChevronDown } from "react-icons/fa";
 import { useState } from "react";
 import logo from "../assets/flipkartlogo.svg";
 import usericon from "../assets/usericon.svg";
+import arrowupicon from "../assets/arrowupicon.svg";
+import arrowdownicon from "../assets/arrowdownicon.svg";
 import userwhiteicon from "../assets/userwhiteicon.svg";
 import storeicon from "../assets/storeicon.svg";
 import carticon from "../assets/carticon.svg";
@@ -72,7 +74,7 @@ function Navbar() {
           >
             <img src={isLoginHovered?userwhiteicon:usericon} alt="user-icon" className="mr-1" />
             <span>Login</span>
-            <FaChevronDown
+            <img src={isLoginHovered?arrowupicon:arrowdownicon}
               className={`ml-1 transition-transform duration-500 ${
                 isLoginHovered ? "rotate-180" : ""
               }`}
