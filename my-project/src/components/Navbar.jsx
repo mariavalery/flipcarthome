@@ -43,12 +43,12 @@ function Navbar() {
       {/* Logo */}
       <div>
         <a href="/" className="flex items-center">
-          <img src={logo} alt="flipkart-logo" className="h-10 object-contain" />
+          <img src={logo} title="Flipkart" alt="flipkart-logo" className="h-10 object-contain" />
         </a>
       </div>
 
       {/* Search Bar */}
-      <div className="flex-1 items-center mx-6">
+      <div className="flex-1 items-center mx-6" title="Search for Products, Brands and More">
         <div className="flex bg-blue-50 px-4 py-2 rounded-md">
           <FaSearch className="text-gray-500 mr-2" />
           <input
@@ -71,6 +71,7 @@ function Navbar() {
             className={`inline-flex items-center px-3 py-1 rounded-md cursor-pointer ${
               isLoginHovered ? "bg-blue-600 text-white" : "text-gray-800"
             }`}
+          title="Login"
           >
             <img src={isLoginHovered?userwhiteicon:usericon} alt="user-icon" className="mr-1" />
             <span>Login</span>
@@ -82,9 +83,9 @@ function Navbar() {
           </div>
 
           {isLoginHovered && (
-            <div className="absolute top-full mt-2 left-0 bg-white shadow-md rounded-md w-56 z-50 text-sm">
-              <div className="p-3 border-b flex justify-between items-center">
-                <span className="text-gray-500">New Customer?</span>
+            <div className="absolute top-full mt-2 left-0 bg-white shadow-md rounded-md w-56 z-50 text-sm cursor-pointer">
+              <div className="p-3 border-b flex justify-between items-center " title="Sign Up">
+                <span className="text-gray-500 " >New Customer?</span>
                 <a href="/Signup" className="text-blue-600 font-semibold">
                   Sign Up
                 </a>
@@ -96,6 +97,7 @@ function Navbar() {
                     <a
                       href={item.href}
                       className="flex items-center gap-2 hover:bg-gray-100 px-4 py-1 cursor-pointer rounded"
+                      title={item.label}
                     >
                       <img src={item.icon} alt={item.label} />
                       <span>{item.label}</span>
@@ -108,13 +110,13 @@ function Navbar() {
         </div>
 
         {/* Cart */}
-        <a href="/Cart" className="flex items-center px-4 py-2 gap-2 cursor-pointer">
+        <a href="/Cart" title ="Cart" className="flex items-center px-4 py-2 gap-2 cursor-pointer">
           <img src={carticon} alt="cart-icon" />
           <span>Cart</span>
         </a>
 
         {/* Become a Seller */}
-        <a href="/Store" className="flex items-center px-4 py-2 gap-2 cursor-pointer">
+        <a href="/Store" title="Become a Seller" className="flex items-center px-4 py-2 gap-2 cursor-pointer">
           <img src={storeicon} alt="store-icon" />
           <span>Become a Seller</span>
         </a>
@@ -125,7 +127,7 @@ function Navbar() {
           onMouseEnter={() => setIsHelpHovered(true)}
           onMouseLeave={() => setIsHelpHovered(false)}
         >
-          <div className="px-3 py-2 rounded-md hover:bg-gray-50">
+          <div className="px-3 py-2 rounded-md hover:bg-gray-50" title="Dropdown with more help links">
             <img src={eclipsedoticon} alt="more-icon" />
           </div>
 
@@ -137,6 +139,7 @@ function Navbar() {
                     <a
                       href={item.href}
                       className="flex items-center gap-2 hover:bg-gray-100 px-4 py-1 cursor-pointer rounded"
+                      title={item.label}
                     >
                       <img src={item.icon} alt={item.label} />
                       <span>{item.label}</span>
