@@ -39,9 +39,8 @@ const helpmenuItems = [
   { icon: helpcenter, label: "24 x 7 Support Care", href: "/support" },
   { icon: advertise, label: "Advertise", href: "/advertise" },
   { icon: download, label: "Download App", href: "/download" },
-];
-
-function Navbar() {
+]
+function HomeNavbar() {
   const [isLoginHovered, setIsLoginHovered] = useState(false);
   const [isHelpHovered, setIsHelpHovered] = useState(false);
 
@@ -198,4 +197,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default HomeNavbar;
