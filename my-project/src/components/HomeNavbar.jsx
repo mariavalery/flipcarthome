@@ -1,4 +1,3 @@
-import { FaSearch, FaChevronDown } from "react-icons/fa";
 import { useState } from "react";
 import logo from "../assets/flipkartlogo.svg";
 // import searchicon from "..assets/searchicon.svg";
@@ -45,21 +44,21 @@ function HomeNavbar() {
   const [isHelpHovered, setIsHelpHovered] = useState(false);
 
   return (
-    <nav className="w-full h-16 bg-white px-10 py-2 flex justify-between items-center relative shadow-sm">
+    <nav className="w-full h-16 bg-white px-4 py-2 flex justify-between items-center relative shadow-sm ">
       {/* threeBar */}
 
-      <div className=" md:hidden ">
+      <div className=" md:hidden flex-shrink-0">
         <img src={baricon} />
       </div>
 
       {/* Logo */}
-      <div className="flex flex-1 items-center mx-2 gap-4">
-        <a href="/" className="shrink-0">
+      <div className="flex flex-1 items-center px-2 gap-2">
+        <a href="/" className="flex-shrink-0" >
           <img
             src={logo}
             title="Flipkart"
             alt="flipkart-logo"
-            className="w-40 h-10 object-contain"
+            className=" h-10 min-w-[140px]  object-contain"
           />
         </a>
 
@@ -81,7 +80,7 @@ function HomeNavbar() {
       {/* Right Section */}
       <div className="flex items-center text-gray-800 text-md gap-4">
         {/* Shortcut*/}
-        <div className=" md:hidden ">
+        <div className=" md:hidden flex-shrink-0">
           <img src={shortcuticon} />
         </div>
         {/* Login Dropdown */}
@@ -104,7 +103,7 @@ function HomeNavbar() {
             <span>Login</span>
             <img
               src={isLoginHovered ? arrowupicon : arrowdownicon}
-              className={`ml-1 transition-transform duration-500 ${
+              className={`ml-1  transition-transform duration-500 ${
                 isLoginHovered ? "rotate-180" : ""
               }`}
             />
@@ -144,7 +143,7 @@ function HomeNavbar() {
         <a
           href="/Cart"
           title="Cart"
-          className="flex items-center px-1 py-0 gap-2 cursor-pointer"
+          className="flex flex-shrink-0 items-center px-1 py-0 gap-2 cursor-pointer md:mr-0 ml-4"
         >
           <img src={carticon} alt="cart-icon" />
           <span className="hidden md:flex">Cart</span>

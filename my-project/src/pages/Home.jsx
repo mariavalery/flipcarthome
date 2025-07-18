@@ -4,9 +4,11 @@ import HomeNavbar from "../components/HomeNavbar"
 
 function Home() {
   return (
-    <div className="bg-gray-100">
+    <div className='bg-gray-100  min-h-screen'>
       <HomeNavbar/>
-      <Categorymenu/>
+    <div className="md:mx-4 md:my-2">
+      <Categorymenu />
+    </div>
     </div>
   )
 }
