@@ -1,4 +1,5 @@
 
+import { useState } from "react";
 import goatsaleoppo from "../assets/homeslider/goatsaleoppo.webp";
 import homeutilitiessale from "../assets/homeslider/homeutilitiessale.webp";
 import leathersale from "../assets/homeslider/leathersale.jpg";
@@ -21,28 +22,35 @@ const homeSliderItems=[{id:crypto.randomUUID(),icon:goatsaleoppo},
 
 
 function HomeTopCaroussel() {
+  const[homeSlideActiveIndex,setHomeSlideActiveIndex]=useState(0);
+
   return (
-    <div className="relative bg-white px-4 py-2 mx-4 my-2">
+    <div className="relative bg-white   my-4 md:mx-4">
       {/* Left Button */}
-      <button className="absolute left-1 top-1/2 -translate-y-1/2 bg-white  w-8 h-8 flex items-center justify-center z-10">
+      <div className="hidden md:flex">
+      <button className="absolute left-0 top-1/2 -translate-y-1/2 bg-white  w-10 h-20 flex items-center justify-center z-10" onClick={()=>setHomeSlideActiveIndex(prev=>prev===0?homeSliderItems.length-1:prev-1)}>
         <FaChevronLeft />
       </button>
-
+      </div>
       {/* Sliding Category Items */}
-      <div>
-        {homeSliderItems.map(item=>(
-           <div key={item.id}>
-            <img src={item.icon}></img>
-            <span></span>
-           </div>
-
-        ))}
+      <div className="mb-4">
+       
+        <div className="flex flex-col items-center ">
+         
+          <img src={homeSliderItems[homeSlideActiveIndex].icon} className="w-full"/>
+          <div className="border border-gray-500 border-t-2"></div>
+        </div>
+        
+      
+         
       </div>
 
       {/* Right Button */}
-      <button className="absolute right-1 top-1/2 -translate-y-1/2 bg-white shadow  w-8 h-8 flex items-center justify-center z-10">
+      <div className="hidden md:flex">
+      <button className="absolute right-0 top-1/2 -translate-y-1/2 bg-white  w-10 h-20 flex items-center justify-center z-10" onClick={()=>setHomeSlideActiveIndex(prev=>prev===homeSliderItems.length-1?0:prev+1)}>
         <FaChevronRight />
       </button>
+      </div>
     </div>
   );
 }
