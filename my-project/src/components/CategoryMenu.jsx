@@ -13,7 +13,7 @@ const categoryItems=[{id:crypto.randomUUID(),icon:topoffers,label:"Top Offers"},
 
 function Categorymenu() {
   return (
-    <div className="bg-white shadow-md">
+    <div className="bg-white shadow-md md:mx-4 md:my-2">
       <div className="flex items-center py-4 px-6 gap-8 overflow-x-auto scrollbar-hide md:w-full max-w-screen-xl mx-auto ">
         {categoryItems.map((item, index) => (
           <div
