@@ -1,3 +1,4 @@
+import BestOfElectronics from "../components/BestOfElectronics"
 import Categorymenu from "../components/Categorymenu"
 import HomeNavbar from "../components/HomeNavbar"
 import HomeTopCaroussel from "../components/HomeTopCaroussel"
@@ -11,6 +12,7 @@ function Home() {
     
       <Categorymenu />
       <HomeTopCaroussel/>
+      <BestOfElectronics/>
     
     </div>
   )
