@@ -1,8 +1,8 @@
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import flightbanner from "../assets/flightbanner.webp";
+
 import { useState } from "react";
 
-function ProductSlider({items}) {
+function ProductSlider({ items, title, bannerImg }) {
   const [isShifted, setIsShifted] = useState(false);
   const itemsLength = items.length;
 
@@ -14,10 +14,10 @@ function ProductSlider({items}) {
     : items.slice(0, 6);
 
   return (
-    <div className="flex mx-4 my-2 bg-white">
-      <div className="flex-1">
-        <div className="py-2 px-4 font-semibold">Best Of Electronics</div>
-        <div className="relative w-11/12 mx-2 text-lg font-semibold">
+    <div className="flex mx-4 my-2 bg-white w-full">
+      <div className="flex-1 ">
+        <div className="py-2 px-4 font-semibold">{title}</div>
+        <div className="relative  mx-2 text-lg font-semibold">
           {isShifted && (
             <button
               onClick={handlePrevious}
@@ -27,12 +27,12 @@ function ProductSlider({items}) {
             </button>
           )}
 
-          <div className="overflow-y-auto md:overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory  px-4">
+          <div className="overflow-y-auto  md:overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory  px-4">
             <div className="flex flex-col  md:flex-row md:gap-4">
               {slideShow.map((item) => (
                 <div
                   key={item.id}
-                  className="flex-shrink-0  snap-start text-sm  border-b-2 border-gray-300 md:border-none   "
+                  className="flex-1  snap-start text-sm  border-b-2 border-gray-300 md:border-none   "
                 >
                   <div className="flex items-center  w-full justify-between md:flex-col md:items-center gap-3 md:gap-6 px-4 py-3   md:border-none ">
                     {/* Image */}
@@ -71,16 +71,18 @@ function ProductSlider({items}) {
         </div>
       </div>
 
-      <div className="hidden md:flex justify-center items-center">
-        <a>
-          <img
-            src={flightbanner}
-            alt="flight-banner"
-            loading="lazy"
-            className="w-52 h-60 object-contain"
-          />
-        </a>
-      </div>
+      {bannerImg && (
+        <div className="hidden md:flex justify-center items-center">
+          <a>
+            <img
+              src={bannerImg}
+              alt="flight-banner"
+              loading="lazy"
+              className="w-52 h-60 object-contain"
+            />
+          </a>
+        </div>
+      )}
     </div>
   );
 }
