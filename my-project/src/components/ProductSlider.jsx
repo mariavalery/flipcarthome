@@ -1,83 +1,17 @@
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import flightbanner from "../assets/flightbanner.webp";
-import laptopstands from "../assets/electronics/laptopstands.webp";
-import headphone from "../assets/electronics/headphone.webp";
-import mirrorlesscamera from "../assets/electronics/mirrorlesscamera.webp";
-import keyboards from "../assets/electronics/keyboards.webp";
-import mouse from "../assets/electronics/mouse.webp";
-import powerbanks from "../assets/electronics/powerbanks.webp";
-import printers from "../assets/electronics/printers.webp";
-import projector from "../assets/electronics/projector.webp";
-import smartwatch from "../assets/electronics/smartwatch.webp";
 import { useState } from "react";
 
-const slidesItem = [
-  {
-    id: crypto.randomUUID(),
-    icon: laptopstands,
-    label: "Laptop Stands",
-    sublabel: "Grab Now",
-  },
-  {
-    id: crypto.randomUUID(),
-    icon: headphone,
-    label: "Headphones",
-    sublabel: "Grab Now",
-  },
-  {
-    id: crypto.randomUUID(),
-    icon: mirrorlesscamera,
-    label: "Mirrorless Camera",
-    sublabel: "Shop Now",
-  },
-  {
-    id: crypto.randomUUID(),
-    icon: keyboards,
-    label: "Keyboard",
-    sublabel: "Shop Now",
-  },
-  {
-    id: crypto.randomUUID(),
-    icon: mouse,
-    label: "Mouse",
-    sublabel: "Shop Now",
-  },
-  {
-    id: crypto.randomUUID(),
-    icon: powerbanks,
-    label: "Power Banks",
-    sublabel: "Grab Now",
-  },
-  {
-    id: crypto.randomUUID(),
-    icon: printers,
-    label: "Printers",
-    sublabel: "From ₹10999",
-  },
-  {
-    id: crypto.randomUUID(),
-    icon: projector,
-    label: "Projector",
-    sublabel: "From ₹4599",
-  },
-  {
-    id: crypto.randomUUID(),
-    icon: smartwatch,
-    label: "Smart Watch",
-    sublabel: "From ₹1399",
-  },
-];
-
-function BestOfElectronics() {
+function ProductSlider({items}) {
   const [isShifted, setIsShifted] = useState(false);
-  const itemsLength = slidesItem.length;
+  const itemsLength = items.length;
 
   const handleNext = () => setIsShifted(true);
   const handlePrevious = () => setIsShifted(false);
 
   const slideShow = isShifted
-    ? slidesItem.slice(2, itemsLength + 1)
-    : slidesItem.slice(0, 6);
+    ? items.slice(2, itemsLength + 1)
+    : items.slice(0, 6);
 
   return (
     <div className="flex mx-4 my-2 bg-white">
@@ -100,7 +34,7 @@ function BestOfElectronics() {
                   key={item.id}
                   className="flex-shrink-0  snap-start text-sm  border-b-2 border-gray-300 md:border-none   "
                 >
-                  <div className="flex items-center  w-full justify-center md:flex-col md:items-center md:gap-6 px-4 py-3   md:border-none ">
+                  <div className="flex items-center  w-full justify-between md:flex-col md:items-center gap-3 md:gap-6 px-4 py-3   md:border-none ">
                     {/* Image */}
                     <img
                       src={item.icon}
@@ -109,7 +43,7 @@ function BestOfElectronics() {
                     />
 
                     {/* Text */}
-                    <div className="flex-1 min-w-0  md:px-0 md:text-center">
+                    <div className="flex-1 min-w-0 px-4  md:px-0 md:text-center">
                       <p className="text-sm font-semibold text-black ">
                         {item.label}
                       </p>
@@ -151,4 +85,4 @@ function BestOfElectronics() {
   );
 }
 
-export default BestOfElectronics;
+export default ProductSlider;
