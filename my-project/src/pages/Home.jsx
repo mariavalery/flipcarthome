@@ -11,6 +11,8 @@ import {
   loginmenuItems,
   sportsHealthFoodItems,
   fashionDealsItems,
+  makeYourHomeStylishItems,
+  homeDecorAndFurnishingItems,
 } from "../items/ItemsArray";
 import flightbanner from "../assets/flightbanner.webp";
 import TopDealsBanner from "../components/TopDealsBanner";
@@ -38,8 +40,8 @@ function Home() {
       />
       <div className="flex flex-col md:flex-row md:space-x-4">
         <TopDealsBanner items={fashionDealsItems} title="Top Fashion Deals" />
-        <TopDealsBanner items={fashionDealsItems} title="Top Fashion Deals" />
-        <TopDealsBanner items={fashionDealsItems} title="Top Fashion Deals" />
+        <TopDealsBanner items={makeYourHomeStylishItems} title="Make Your Home Stylish" />
+        <TopDealsBanner items={homeDecorAndFurnishingItems} title="Home Decor And Furnishing" />
       </div>
     </div>
   );

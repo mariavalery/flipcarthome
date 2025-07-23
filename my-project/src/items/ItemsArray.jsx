@@ -55,6 +55,14 @@ import saree from "../assets/fashiondeals/saree.jpeg";
 import shirts from "../assets/fashiondeals/shirts.webp";
 import tshirts from "../assets/fashiondeals/tshirt.webp";
 import slippers from "../assets/fashiondeals/slippers.jpeg";
+import cots from "../assets/makeyourhomestylish/cots.webp";
+import organiser from "../assets/makeyourhomestylish/organiser.webp";
+import studytable from "../assets/makeyourhomestylish/studytable.webp";
+import swing from "../assets/makeyourhomestylish/swing.webp";
+import bulb from "../assets/homedecorfurnishing/bulb.webp";
+import lights from "../assets/homedecorfurnishing/lights.jpeg";
+import umbrella from "../assets/homedecorfurnishing/umbrella.webp";
+import wallclock from "../assets/homedecorfurnishing/wallclock.webp";
 export const loginmenuItems = [
   { icon: usericon, label: "My Profile", href: "/myprofile" },
   { icon: fkplus, label: "Flipkart Plus Zone", href: "/flipkartpluszone" },
@@ -242,24 +250,73 @@ export const sportsHealthFoodItems=[{
 export const fashionDealsItems=[{
     id: crypto.randomUUID(),
     icon: saree,
-    label: "Saree",
-    sublabel: "Grab Now",
+    label: "Women's Ethnic Sets",
+    sublabel: "Min.50% Off",
   },
   {
     id: crypto.randomUUID(),
     icon: shirts,
     label: "Shirts",
-    sublabel: "Grab Now",
+    sublabel: "Special Offer",
   },
   {
     id: crypto.randomUUID(),
     icon: tshirts,
     label: "T-Shirts",
-    sublabel: "Shop Now",
+    sublabel: "Min.50% Off",
   },
   {
     id: crypto.randomUUID(),
     icon: slippers,
     label: "Slippers",
-    sublabel: "Shop Now",
+    sublabel: "Min.70% Off",
   }]
+export const makeYourHomeStylishItems=[{
+    id: crypto.randomUUID(),
+    icon: cots,
+    label: "Beds",
+    sublabel: "Min.50% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: organiser,
+    label: "Organiser",
+    sublabel: "Special Offer",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: studytable,
+    label: "Studytable",
+    sublabel: "Min.50% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: swing,
+    label: "Swing",
+    sublabel: "Min.70% Off",
+  }]
+export const homeDecorAndFurnishingItems=[{
+    id: crypto.randomUUID(),
+    icon: bulb,
+    label: "Bulb",
+    sublabel: "Min.50% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: lights,
+    label: "Lights",
+    sublabel: "Special Offer",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: umbrella,
+    label: "Umbrella",
+    sublabel: "Min.50% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: wallclock,
+    label: "Wallclock",
+    sublabel: "Min.70% Off",
+  }]
+

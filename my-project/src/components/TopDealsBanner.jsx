@@ -32,16 +32,16 @@ function TopDealsBanner({ items, title }) {
         {items.map((item) => (
           <div
             key={item.id}
-            className="flex md:flex-col items-center border border-gray-200 p-3 rounded"
+            className="flex-col items-center border border-gray-200 p-3 rounded"
           >
             <img
               src={item.icon}
               alt={item.label}
-              className="w-14 h-16 md:w-24 md:h-24 object-contain"
+              className="w-[296px] h-[296px] md:w-[139px] md:h-[139px] object-contain"
             />
-            <div className="px-4">
-              <p className="font-medium text-gray-800">{item.label}</p>
-              <p className="text-sm text-green-900">{item.sublabel}</p>
+            <div className="px-4 w-40 md:w-62">
+              <p className="font-medium text-gray-800  truncate ">{item.label}</p>
+              <p className="text-lg text-green-700 font-bold">{item.sublabel}</p>
             </div>
           </div>
         ))}
