@@ -93,19 +93,19 @@ function BestOfElectronics() {
             </button>
           )}
 
-          <div className="overflow-y-auto md:overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide px-4">
+          <div className="overflow-y-auto md:overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory  px-4">
             <div className="flex flex-col  md:flex-row md:gap-4">
               {slideShow.map((item) => (
                 <div
                   key={item.id}
                   className="flex-shrink-0  snap-start text-sm  border-b-2 border-gray-300 md:border-none   "
                 >
-                  <div className="flex items-center  w-full justify-between md:flex-col md:items-center gap-4 px-4 py-3 md:p-2  md:border-none ">
+                  <div className="flex items-center  w-full justify-center md:flex-col md:items-center md:gap-6 px-4 py-3   md:border-none ">
                     {/* Image */}
                     <img
                       src={item.icon}
                       alt={item.label}
-                      className="h-28 w-28 md:h-24 md:w-24 object-contain shrink-0"
+                      className="h-28 w-28 md:h-28 md:w-32 object-contain shrink-0"
                     />
 
                     {/* Text */}
@@ -113,9 +113,7 @@ function BestOfElectronics() {
                       <p className="text-sm font-semibold text-black ">
                         {item.label}
                       </p>
-                      <p className="text-sm text-gray-500 ">
-                        {item.sublabel}
-                      </p>
+                      <p className="text-sm text-gray-500 ">{item.sublabel}</p>
                     </div>
 
                     {/* Chevron Icon (Mobile only) */}

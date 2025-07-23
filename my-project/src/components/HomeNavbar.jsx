@@ -1,6 +1,5 @@
 import { useState } from "react";
 import logo from "../assets/flipkartlogo.svg";
-// import searchicon from "..assets/searchicon.svg";
 import shortcuticon from "../assets/shortcuticon.svg";
 import baricon from "../assets/baricon.svg";
 import usericon from "../assets/usericon.svg";
