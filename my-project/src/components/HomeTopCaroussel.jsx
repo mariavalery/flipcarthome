@@ -1,30 +1,12 @@
 import { useEffect, useState } from "react";
-import goatsaleoppo from "../assets/homeslider/goatsaleoppo.webp";
-import homeutilitiessale from "../assets/homeslider/homeutilitiessale.webp";
-import leathersale from "../assets/homeslider/leathersale.jpg";
-import motorologoatsale from "../assets/homeslider/motorologoatsale.webp";
-import opposale from "../assets/homeslider/opposale.webp";
-import phone3a from "../assets/homeslider/phone3a.webp";
-import saleislive from "../assets/homeslider/saleislive.webp";
-import samsungsale from "../assets/homeslider/samsungsale.webp";
-import smarttv from "../assets/homeslider/smarttv.webp";
+
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-const homeSliderItems = [
-  { id: crypto.randomUUID(), icon: goatsaleoppo },
-  { id: crypto.randomUUID(), icon: homeutilitiessale },
-  { id: crypto.randomUUID(), icon: leathersale },
-  { id: crypto.randomUUID(), icon: motorologoatsale },
-  { id: crypto.randomUUID(), icon: opposale },
-  { id: crypto.randomUUID(), icon: phone3a },
-  { id: crypto.randomUUID(), icon: saleislive },
-  { id: crypto.randomUUID(), icon: samsungsale },
-  { id: crypto.randomUUID(), icon: smarttv },
-];
 
-function HomeTopCaroussel() {
+
+function HomeTopCaroussel({items}) {
   const [homeSlideActiveIndex, setHomeSlideActiveIndex] = useState(0);
-  const slideCount = homeSliderItems.length;
+  const slideCount = items.length;
   const intervalTime=2000;
 
   useEffect(() => {
@@ -53,11 +35,11 @@ function HomeTopCaroussel() {
       <div className="mb-4">
         <div className="flex flex-col items-center ">
           <img
-            src={homeSliderItems[homeSlideActiveIndex].icon}
+            src={items[homeSlideActiveIndex].icon}
             className="w-full"
           />
           <div className="flex my-2">
-            {homeSliderItems.map((item, index) => (
+            {items.map((item, index) => (
               <div
                 className={`relative bg-gray-200  h-1 mx-1 rounded-sm ${index===homeSlideActiveIndex?"w-10":"w-6"} `}
                 key={item.id}

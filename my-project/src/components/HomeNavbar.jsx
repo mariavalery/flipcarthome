@@ -1,44 +1,15 @@
 import { useState } from "react";
 import logo from "../assets/flipkartlogo.svg";
+import usericon from "../assets/usericon.svg";
 import shortcuticon from "../assets/shortcuticon.svg";
 import baricon from "../assets/baricon.svg";
-import usericon from "../assets/usericon.svg";
 import arrowupicon from "../assets/arrowupicon.svg";
 import arrowdownicon from "../assets/arrowdownicon.svg";
 import userwhiteicon from "../assets/userwhiteicon.svg";
 import storeicon from "../assets/storeicon.svg";
 import carticon from "../assets/carticon.svg";
 import eclipsedoticon from "../assets/eclipsedoticon.svg";
-import fkplus from "../assets/dropdown icons/fkplus.svg";
-import orde from "../assets/dropdown icons/orde.svg";
-import heart from "../assets/dropdown icons/heart.svg";
-import rewards from "../assets/dropdown icons/rewards.svg";
-import giftCard from "../assets/dropdown icons/giftCard.svg";
-import helpcenter from "../assets/dropdown icons/helpcenter.svg";
-import download from "../assets/dropdown icons/download.svg";
-import advertise from "../assets/dropdown icons/advertise.svg";
-import notificationPreferences from "../assets/dropdown icons/notificationPreferences.svg";
-
-const loginmenuItems = [
-  { icon: usericon, label: "My Profile", href: "/myprofile" },
-  { icon: fkplus, label: "Flipkart Plus Zone", href: "/flipkartpluszone" },
-  { icon: orde, label: "Orders", href: "/orders" },
-  { icon: heart, label: "Wishlist", href: "/wishlist" },
-  { icon: rewards, label: "Rewards", href: "/rewards" },
-  { icon: giftCard, label: "Giftcards", href: "/giftcards" },
-];
-
-const helpmenuItems = [
-  {
-    icon: notificationPreferences,
-    label: "Notification Preferences",
-    href: "/notificationPreferences",
-  },
-  { icon: helpcenter, label: "24 x 7 Support Care", href: "/support" },
-  { icon: advertise, label: "Advertise", href: "/advertise" },
-  { icon: download, label: "Download App", href: "/download" },
-]
-function HomeNavbar() {
+function HomeNavbar({items1,items2}) {
   const [isLoginHovered, setIsLoginHovered] = useState(false);
   const [isHelpHovered, setIsHelpHovered] = useState(false);
 
@@ -121,7 +92,7 @@ function HomeNavbar() {
               </div>
 
               <ul className="p-2 space-y-2">
-                {loginmenuItems.map((item, index) => (
+                {items1.map((item, index) => (
                   <li key={index}>
                     <a
                       href={item.href}
@@ -174,7 +145,7 @@ function HomeNavbar() {
           {isHelpHovered && (
             <div className="absolute top-full right-0 mt-2 bg-white shadow-lg rounded-lg w-56 z-50 text-sm">
               <ul className="p-2 space-y-2">
-                {helpmenuItems.map((item, index) => (
+                {items2.map((item, index) => (
                   <li key={index}>
                     <a
                       href={item.href}

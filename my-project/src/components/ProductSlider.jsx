@@ -39,7 +39,7 @@ function ProductSlider({ items, title, bannerImg }) {
                     <img
                       src={item.icon}
                       alt={item.label}
-                      className="h-28 w-28 md:h-28 md:w-32 object-contain shrink-0"
+                      className="h-20 w-16 md:h-28 md:w-32 object-contain shrink-0"
                     />
 
                     {/* Text */}
