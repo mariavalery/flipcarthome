@@ -2,7 +2,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 import { useState } from "react";
 
-function ProductSlider({ items, title, bannerImg }) {
+function ProductSlider({ items, title, bannerImg,showNavigation}) {
   const [isShifted, setIsShifted] = useState(false);
   const itemsLength = items.length;
 
@@ -16,9 +16,9 @@ function ProductSlider({ items, title, bannerImg }) {
   return (
     <div className="flex mx-4 my-2 bg-white w-full">
       <div className="flex-1 ">
-        <div className="py-2 px-4 font-semibold">{title}</div>
+        <div className="py-2 px-4 text:xl md:text-2xl font-semibold ">{title}</div>
         <div className="relative  mx-2 text-lg font-semibold">
-          {isShifted && (
+          {showNavigation && isShifted && (
             <button
               onClick={handlePrevious}
               className="absolute left-0 top-1/2 transform -translate-y-1/2 w-10 h-20 z-10 bg-white border-none hidden md:flex"
@@ -60,7 +60,7 @@ function ProductSlider({ items, title, bannerImg }) {
             </div>
           </div>
 
-          {!isShifted && (
+          {showNavigation && !isShifted && (
             <button
               onClick={handleNext}
               className="absolute right-0 top-1/2 transform -translate-y-1/2 w-10 h-20 z-10 bg-white border-none hidden md:flex"

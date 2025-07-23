@@ -1,13 +1,4 @@
-import logo from "../assets/flipkartlogo.svg";
-import shortcuticon from "../assets/shortcuticon.svg";
-import baricon from "../assets/baricon.svg";
 import usericon from "../assets/usericon.svg";
-import arrowupicon from "../assets/arrowupicon.svg";
-import arrowdownicon from "../assets/arrowdownicon.svg";
-import userwhiteicon from "../assets/userwhiteicon.svg";
-import storeicon from "../assets/storeicon.svg";
-import carticon from "../assets/carticon.svg";
-import eclipsedoticon from "../assets/eclipsedoticon.svg";
 import fkplus from "../assets/dropdown icons/fkplus.svg";
 import orde from "../assets/dropdown icons/orde.svg";
 import heart from "../assets/dropdown icons/heart.svg";
@@ -54,6 +45,16 @@ import powerbanks from "../assets/electronics/powerbanks.webp";
 import printers from "../assets/electronics/printers.webp";
 import projector from "../assets/electronics/projector.webp";
 import smartwatch from "../assets/electronics/smartwatch.webp";
+import breakfastcereal from "../assets/sports,health/breakfastcereal.webp";
+import FoodSpreads from "../assets/sports,health/FoodSpreads.webp";
+import honey from "../assets/sports,health/honey.webp";
+import learning from "../assets/sports,health/learning.webp";
+import musicaltoys from "../assets/sports,health/musicaltoys.webp";
+import puzzles from "../assets/sports,health/puzzles.webp";
+import saree from "../assets/fashiondeals/saree.jpeg";
+import shirts from "../assets/fashiondeals/shirts.webp";
+import tshirts from "../assets/fashiondeals/tshirt.webp";
+import slippers from "../assets/fashiondeals/slippers.jpeg";
 export const loginmenuItems = [
   { icon: usericon, label: "My Profile", href: "/myprofile" },
   { icon: fkplus, label: "Flipkart Plus Zone", href: "/flipkartpluszone" },
@@ -72,7 +73,7 @@ export const helpmenuItems = [
   { icon: helpcenter, label: "24 x 7 Support Care", href: "/support" },
   { icon: advertise, label: "Advertise", href: "/advertise" },
   { icon: download, label: "Download App", href: "/download" },
-]
+];
 export const categoryItems = [
   { id: crypto.randomUUID(), icon: topoffers, label: "Top Offers" },
   { id: crypto.randomUUID(), icon: mobilephones, label: "Mobiles & Tablet" },
@@ -202,3 +203,63 @@ export const electronicSlidesItem = [
     sublabel: "From ₹1399",
   },
 ];
+export const sportsHealthFoodItems=[{
+    id: crypto.randomUUID(),
+    icon: breakfastcereal,
+    label: "Breakfast Cereal",
+    sublabel: "Grab Now",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: FoodSpreads,
+    label: "FoodSpreads",
+    sublabel: "Grab Now",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: honey,
+    label: "Honey",
+    sublabel: "Shop Now",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: learning,
+    label: "Learning",
+    sublabel: "Shop Now",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: musicaltoys,
+    label: "Musical Toys",
+    sublabel: "Shop Now",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: puzzles,
+    label: "Puzzles",
+    sublabel: "Grab Now",
+  }]
+export const fashionDealsItems=[{
+    id: crypto.randomUUID(),
+    icon: saree,
+    label: "Saree",
+    sublabel: "Grab Now",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: shirts,
+    label: "Shirts",
+    sublabel: "Grab Now",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: tshirts,
+    label: "T-Shirts",
+    sublabel: "Shop Now",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: slippers,
+    label: "Slippers",
+    sublabel: "Shop Now",
+  }]
