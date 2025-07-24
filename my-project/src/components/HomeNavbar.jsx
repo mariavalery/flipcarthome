@@ -9,7 +9,7 @@ import userwhiteicon from "../assets/userwhiteicon.svg";
 import storeicon from "../assets/storeicon.svg";
 import carticon from "../assets/carticon.svg";
 import eclipsedoticon from "../assets/eclipsedoticon.svg";
-function HomeNavbar({items1,items2}) {
+function HomeNavbar({ items1, items2 }) {
   const [isLoginHovered, setIsLoginHovered] = useState(false);
   const [isHelpHovered, setIsHelpHovered] = useState(false);
 
@@ -23,7 +23,7 @@ function HomeNavbar({items1,items2}) {
 
       {/* Logo */}
       <div className="flex flex-1 items-center px-2 gap-2">
-        <a href="/" className="flex-shrink-0" >
+        <a href="/" className="flex-shrink-0">
           <img
             src={logo}
             title="Flipkart"
@@ -33,10 +33,34 @@ function HomeNavbar({items1,items2}) {
         </a>
 
         {/* Search Bar */}
-        <div className="hidden md:flex flex-1 items-center bg-blue-50 px-2 py-1 rounded-md" title="Search for Products, Brands and More">
+        <div
+          className="hidden md:flex flex-1 items-center bg-blue-50 px-2 py-1 rounded-md"
+          title="Search for Products, Brands and More"
+        >
           <div>
             <button>
-              <svg width="24" height="24"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5 18C14.6421 18 18 14.6421 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18Z" stroke="#717478" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path><path d="M16 16L21 21" stroke="#717478" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path></svg>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.5 18C14.6421 18 18 14.6421 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18Z"
+                  stroke="#717478"
+                  strokeWidth="1.4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>
+                <path
+                  d="M16 16L21 21"
+                  stroke="#717478"
+                  strokeWidth="1.4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>
+              </svg>
             </button>
           </div>
           <input

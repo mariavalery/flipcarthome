@@ -63,6 +63,42 @@ import bulb from "../assets/homedecorfurnishing/bulb.webp";
 import lights from "../assets/homedecorfurnishing/lights.jpeg";
 import umbrella from "../assets/homedecorfurnishing/umbrella.webp";
 import wallclock from "../assets/homedecorfurnishing/wallclock.webp";
+import cycles from "../assets/sesonstoppicks/cycles.webp";
+import helmet from "../assets/sesonstoppicks/helmet.webp";
+import mamypoko from "../assets/sesonstoppicks/mamypoko.webp";
+import nuts from "../assets/sesonstoppicks/nuts.webp";
+import DeskOrganisers  from "../assets/monsoonessentials/Desk Organisers.webp";
+import FitnessAccessories from "../assets/monsoonessentials/Fitness Accessories.webp";
+import Laptops from "../assets/monsoonessentials/Laptops.webp";
+import Lipstick from "../assets/monsoonessentials/Lipstick.webp";
+import menscaps from "../assets/monsoonreadysales/menscaps.webp";
+import belt from "../assets/monsoonreadysales/belt.webp";
+import pendants from "../assets/monsoonreadysales/pendants.webp";
+import slipper from "../assets/monsoonreadysales/slippers.webp";
+import dronecameras from "../assets/trendinggadgets/deonecameras.webp";
+import hairdryers from "../assets/trendinggadgets/hairdryers.webp";
+import shavers from "../assets/trendinggadgets/shavers.webp";
+import trimmers from "../assets/trendinggadgets/trimmers.webp";
+import FacePack from "../assets/haircareandskin/Face Pack.webp";
+import FaceWash from "../assets/haircareandskin/Face Wash.webp";
+import HairClaw from "../assets/haircareandskin/Hair Claw.webp";
+import Moisturizer from "../assets/haircareandskin/Moisturizer.webp";
+import beanbag from "../assets/bottomfurnituretopdeals/beanbag.webp";
+import chairs from "../assets/bottomfurnituretopdeals/chairs.webp";
+import dinningsets from "../assets/bottomfurnituretopdeals/dinningsets.webp";
+import furnituredeals from "../assets/bottomfurnituretopdeals/furnituredeals.webp";
+import recliner from "../assets/bottomfurnituretopdeals/recliner.webp";
+import sofas from "../assets/bottomfurnituretopdeals/sofas.webp";
+import wardrope from "../assets/bottomfurnituretopdeals/wardrope.webp";
+import wardropes from "../assets/bottomfurnituretopdeals/wardropes.webp";
+import Lingerie from "../assets/fashiontopdeals/Lingerie.webp";
+import Panty from "../assets/fashiontopdeals/Panty.webp";
+import PumaandAddidas from "../assets/fashiontopdeals/Puma And Addidas Shoes.webp";
+import SwimandBath from "../assets/fashiontopdeals/Swim And Beach Wear.webp";
+import Womenbra from "../assets/fashiontopdeals/Women Bra.webp";
+import Womendress from "../assets/fashiontopdeals/Women Dresses.webp";
+import Womenshirts from "../assets/fashiontopdeals/Women Shirts.webp";
+import Womennightsuits from "../assets/fashiontopdeals/Womens Nightsuit.webp";
 export const loginmenuItems = [
   { icon: usericon, label: "My Profile", href: "/myprofile" },
   { icon: fkplus, label: "Flipkart Plus Zone", href: "/flipkartpluszone" },
@@ -319,4 +355,274 @@ export const homeDecorAndFurnishingItems=[{
     label: "Wallclock",
     sublabel: "Min.70% Off",
   }]
+export const seasonTopPicksItems=[{
+    id: crypto.randomUUID(),
+    icon: cycles,
+    label: "Cycles",
+    sublabel: "Min.50% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: helmet,
+    label: "Helmet",
+    sublabel: "Special Offer",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: mamypoko,
+    label: "Mammy Pako Pants",
+    sublabel: "Min.50% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: nuts,
+    label: "Nuts",
+    sublabel: "Min.70% Off",
+  }]
+export const monsoonEssentialsItems=[{
+    id: crypto.randomUUID(),
+    icon: DeskOrganisers,
+    label: "Desk Organisers",
+    sublabel: "Min.50% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: FitnessAccessories,
+    label: "Fitness Accessories",
+    sublabel: "Special Offer",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: Laptops,
+    label: "Laptops",
+    sublabel: "Min.50% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: Lipstick,
+    label: "Lipsticks",
+    sublabel: "Min.70% Off",
+  }]  
+export const monsoonReadysalesItems=[{
+    id: crypto.randomUUID(),
+    icon: belt,
+    label: "Belt",
+    sublabel: "Min.50% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: menscaps,
+    label: "Mens Caps",
+    sublabel: "Special Offer",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: pendants,
+    label: "Pendants",
+    sublabel: "Min.50% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: slipper,
+    label: "Slippers",
+    sublabel: "Min.70% Off",
+  }]  
+export const trendinggadgetsandappliancesItems=[{
+    id: crypto.randomUUID(),
+    icon: dronecameras,
+    label: "Drones and Cameras",
+    sublabel: "Min.50% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: hairdryers,
+    label: "Hair Dryers",
+    sublabel: "Special Offer",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: shavers,
+    label: "Shavers",
+    sublabel: "Min.50% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: trimmers,
+    label: "Trimmers",
+    sublabel: "Min.70% Off",
+  }]  
+export const hairandskincareItems=[{
+    id: crypto.randomUUID(),
+    icon: FacePack,
+    label: "Face Pack",
+    sublabel: "Min.50% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: FaceWash,
+    label: "Face Wash",
+    sublabel: "Special Offer",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: HairClaw,
+    label: "Hair Claw",
+    sublabel: "Min.50% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: Moisturizer,
+    label: "Moisturizer",
+    sublabel: "Min.70% Off",
+  }]    
+export const furnituresTopDeals = [
+  {
+    id: crypto.randomUUID(),
+    icon: beanbag,
+    label: "Bean Bag",
+    sublabel: "Upto 40% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: chairs,
+    label: "Health",
+    sublabel: "Shop Now",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: dinningsets,
+    label: "Dinning Sets",
+    sublabel: "From 399",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: furnituredeals,
+    label:"Furniture Deals",
+    sublabel: "Upto 40% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: recliner,
+    label: "Recliner",
+    sublabel: "Upto 60% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: sofas,
+    label: "Sofas",
+    sublabel: "Upto 40% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: wardrope,
+    label: "Wardrope",
+    sublabel: "Upto 80% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: wardropes,
+    label: "Wardropes",
+    sublabel: "Upto 70% Off",
+  },
+];
+export const fashionTopDeals = [
+  {
+    id: crypto.randomUUID(),
+    icon: Lingerie,
+    label: "Lingerie ",
+    sublabel: "Upto 40% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: Panty,
+    label: "Panty",
+    sublabel: "Shop Now",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: PumaandAddidas,
+    label: "Puma and Addidas Shoes",
+    sublabel: "From 399",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: SwimandBath,
+    label: "Swim and Beach Wear",
+    sublabel: "Upto 40% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: Womenbra,
+    label: "Women Bra",
+    sublabel: "Upto 60% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: Womendress,
+    label: "Women Dress",
+    sublabel: "Upto 40% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: Womenshirts,
+    label: "Women Shirts",
+    sublabel: "Upto 80% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: Womennightsuits,
+    label: "Women nightsuits",
+    sublabel: "Upto 70% Off",
+  },
+];
+export const topDeals = [
+  {
+    id: crypto.randomUUID(),
+    icon: babybedding,
+    label: "Baby Bedding",
+    sublabel: "Upto 40% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: health,
+    label: "Health",
+    sublabel: "Shop Now",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: instruments,
+    label: "Instruments",
+    sublabel: "From 399",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: lipsticks,
+    label: "Lipsticks",
+    sublabel: "Upto 40% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: pens,
+    label: "Pens",
+    sublabel: "Upto 60% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: petessentials,
+    label: "Pet Essentials",
+    sublabel: "Upto 40% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: ponds,
+    label: "Ponds",
+    sublabel: "Upto 80% Off",
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: toys,
+    label: "Toys",
+    sublabel: "Upto 70% Off",
+  },
+];
 

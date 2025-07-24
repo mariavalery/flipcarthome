@@ -17,17 +17,17 @@ function ProductSlider({ items, title, bannerImg,showNavigation}) {
     <div className="flex mx-4 my-2 bg-white w-full">
       <div className="flex-1 ">
         <div className="py-2 px-4 text:xl md:text-2xl font-semibold ">{title}</div>
-        <div className="relative  mx-2 text-lg font-semibold">
+        <div className="relative  text-lg font-semibold">
           {showNavigation && isShifted && (
             <button
               onClick={handlePrevious}
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 w-10 h-20 z-10 bg-white border-none hidden md:flex"
+              className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-xl w-10 h-28  items-center justify-center z-10 hidden md:flex"
             >
               <FaChevronLeft />
             </button>
           )}
 
-          <div className="overflow-y-auto  md:overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory  px-4">
+          <div className="overflow-y-auto  md:overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory ">
             <div className="flex flex-col  md:flex-row md:gap-4">
               {slideShow.map((item) => (
                 <div
@@ -39,7 +39,7 @@ function ProductSlider({ items, title, bannerImg,showNavigation}) {
                     <img
                       src={item.icon}
                       alt={item.label}
-                      className="h-20 w-16 md:h-28 md:w-32 object-contain shrink-0"
+                      className="h-20 w-16 md:h-28 md:w-36 object-contain shrink-0"
                     />
 
                     {/* Text */}
@@ -63,7 +63,7 @@ function ProductSlider({ items, title, bannerImg,showNavigation}) {
           {showNavigation && !isShifted && (
             <button
               onClick={handleNext}
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 w-10 h-20 z-10 bg-white border-none hidden md:flex"
+              className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-xl w-10 h-28  items-center justify-center z-10 hidden md:flex"
             >
               <FaChevronRight />
             </button>

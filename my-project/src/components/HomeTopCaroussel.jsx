@@ -2,12 +2,10 @@ import { useEffect, useState } from "react";
 
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-
-
-function HomeTopCaroussel({items}) {
+function HomeTopCaroussel({ items }) {
   const [homeSlideActiveIndex, setHomeSlideActiveIndex] = useState(0);
   const slideCount = items.length;
-  const intervalTime=2000;
+  const intervalTime = 2000;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -34,21 +32,22 @@ function HomeTopCaroussel({items}) {
       {/* Sliding Category Items */}
       <div className="mb-4">
         <div className="flex flex-col items-center ">
-          <img
-            src={items[homeSlideActiveIndex].icon}
-            className="w-full"
-          />
+          <img src={items[homeSlideActiveIndex].icon} className="w-full" />
           <div className="flex my-2">
             {items.map((item, index) => (
               <div
-                className={`relative bg-gray-200  h-1 mx-1 rounded-sm ${index===homeSlideActiveIndex?"w-10":"w-6"} `}
+                className={`relative bg-gray-200  h-1 mx-1 rounded-sm ${
+                  index === homeSlideActiveIndex ? "w-10" : "w-6"
+                } `}
                 key={item.id}
               >
                 {index === homeSlideActiveIndex && (
                   <div
                     className="absolute  left-0 top-0 h-full bg-black "
-                    style={{width: "100%",
-                    animation: `fillBar ${intervalTime}ms linear`}}
+                    style={{
+                      width: "100%",
+                      animation: `fillBar ${intervalTime}ms linear`,
+                    }}
                   ></div>
                 )}
               </div>
