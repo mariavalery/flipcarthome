@@ -1,9 +1,11 @@
-function MostSearchedCard({ items, title }) {
+function MostSearchedCard({ linkItems }) {
+  console.log(linkItems)
   return (
-    <div className="flex  flex-wrap text-gray-900 text-md leading-tight px-4 py-4">
-      <span className="text-sm font-medium pr-1">{title} : </span>
-      {items.map((item, index) => (
-        <div>
+    <div > 
+    {linkItems.map((items,index)=>(     <div key={index} className="flex  flex-wrap text-gray-600 text-md leading-tight px-1 py-1" >
+      <span className="text-sm font-normal ">{items.title} : </span>
+      {items?.categoryItems?.map((item, index) => (
+        <div key={item.id}>
           <a className="text-xs  cursor-pointer" title={item.label}>
             {item.label}
             {index !== items.length - 1 && (
@@ -12,7 +14,9 @@ function MostSearchedCard({ items, title }) {
           </a>
         </div>
       ))}
-    </div>
+    </div>))}
+</div>
+  
   );
 }
 
