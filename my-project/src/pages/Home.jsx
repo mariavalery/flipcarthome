@@ -22,12 +22,14 @@ import {
   fashionTopDeals,
   furnituresTopDeals,
   topDeals,
+  mostSearchedFooterItems,
 } from "../items/ItemsArray";
 import flightbanner from "../assets/flightbanner.webp";
 import TopDealsBanner from "../components/TopDealsBanner";
+import MostSearchedCard from "../components/MostSearchedCard";
 function Home() {
   return (
-    <div className="bg-gray-50  min-h-screen ">
+    <div className="bg-gray-200  min-h-screen ">
       <HomeNavbar items1={loginmenuItems} items2={helpmenuItems} />
       <Categorymenu items={categoryItems} />
       <HomeTopCaroussel items={homeSliderItems} />
@@ -100,6 +102,12 @@ function Home() {
       />
       <ProductSlider items={topDeals} title="Top Deals" showNavigation={true} />
       <ProductSlider items={electronicSlidesItem} title="Top Deals On Appliances" showNavigation={false} />
+      <footer>
+        <div className="mx-4 my-2">
+          <div className="text-lg font-semibold px-4 py-2">Top Stories : <a>Brand Directory</a></div>
+          <MostSearchedCard items={mostSearchedFooterItems} title="Most Searched For On Flipkart"/>
+        </div>
+      </footer>
     </div>
   );
 }
