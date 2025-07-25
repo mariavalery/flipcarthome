@@ -1213,4 +1213,168 @@ export const jsonLinks=[{title:"MOST SEARCHED FOR ON FLIPKART ",categoryItems:[{
 
 ];
 
+ export const footerLinkCategories = [
+  {
+    title: "ABOUT",
+    categoryItems: [
+      { id: crypto.randomUUID(), label: "Contact Us", href: "/contactus" },
+      { id: crypto.randomUUID(), label: "About Us", href: "/aboutus" },
+      { id: crypto.randomUUID(), label: "Careers", href: "/careers" },
+      { id: crypto.randomUUID(), label: "Flipkart Stories", href: "/flipkartstories" },
+      { id: crypto.randomUUID(), label: "Press", href: "/press" },
+      { id: crypto.randomUUID(), label: "Corporate Information", href: "/corporate-information" },
+    ],
+  },
+  {
+    title: "GROUP COMPANIES",
+    categoryItems: [
+      { id: crypto.randomUUID(), label: "Myntra", href: "/myntra" },
+      { id: crypto.randomUUID(), label: "Cleartrip", href: "/cleartrip" },
+      { id: crypto.randomUUID(), label: "Shopsy", href: "/shopsy" },
+    ],
+  },
+  {
+    title: "HELP",
+    categoryItems: [
+      { id: crypto.randomUUID(), label: "Payments", href: "/payments" },
+      { id: crypto.randomUUID(), label: "Shipping", href: "/shipping" },
+      { id: crypto.randomUUID(), label: "Cancellation & Returns", href: "/cancellation-returns" },
+      { id: crypto.randomUUID(), label: "FAQ", href: "/faq" },
+    ],
+    
+  },
+  {
+    title: "CONSUMER POLICY",
+    categoryItems: [
+      { id: crypto.randomUUID(), label: "Cancellation & Returns", href: "/cancellation-returns" },
+      { id: crypto.randomUUID(), label: "Terms Of Use", href: "/terms-of-use" },
+      { id: crypto.randomUUID(), label: "Security ", href: "/security " },
+      { id: crypto.randomUUID(), label: "Privacy ", href: "/privacy " },
+       { id: crypto.randomUUID(), label: "Sitemap", href: "/sitemap" },
+      { id: crypto.randomUUID(), label: "Grievance Redressal", href: "/grievance-redressal" },
+      { id: crypto.randomUUID(), label: " EPR Compliance ", href: "/ epr-Compliance " },
+    ],
+    
+  },
+];
+
+export const footerExtraSections = [
+  {
+    title: "Mail Us",
+    categoryItems: [
+      {
+        id: crypto.randomUUID(),
+        label: "Flipkart Internet Private Limited,",
+        href: null,
+      },
+      {
+        id: crypto.randomUUID(),
+        label: "Buildings Alyssa, Begonia &",
+        href: null,
+      },
+      {
+        id: crypto.randomUUID(),
+        label: "Clove Embassy Tech Village,",
+        href: null,
+      },
+      {
+        id: crypto.randomUUID(),
+        label: "Outer Ring Road, Devarabeesanahalli Village,",
+        href: null,
+      },
+      {
+        id: crypto.randomUUID(),
+        label: "Bengaluru, 560103,",
+        href: null,
+      },
+      {
+        id: crypto.randomUUID(),
+        label: "Karnataka, India",
+        href: null,
+      },
+    ],
+    subtitle:"Social",
+    socialLinks: [
+      {
+        
+        id: crypto.randomUUID(),
+        icon: "FaFacebookF",
+        label: "Facebook",
+        href: "https://www.facebook.com/flipkart",
+      },
+      {
+        id: crypto.randomUUID(),
+        icon: "FaXTwitter",
+        label: "X",
+        href: "https://twitter.com/flipkart",
+      },
+      {
+        id: crypto.randomUUID(),
+        icon: "FaYoutube",
+        label: "YouTube",
+        href: "https://www.youtube.com/flipkart",
+      },
+      {
+        id: crypto.randomUUID(),
+        icon: "FaInstagram",
+        label: "Instagram",
+        href: "https://www.instagram.com/flipkart",
+      },
+    ],
+  },
+  {
+    title: "Registered Office Address",
+    categoryItems: [
+      {
+        id: crypto.randomUUID(),
+        label: "Flipkart Internet Private Limited,",
+        href: null,
+      },
+      {
+        id: crypto.randomUUID(),
+        label: "Buildings Alyssa, Begonia &",
+        href: null,
+      },
+      {
+        id: crypto.randomUUID(),
+        label: "Clove Embassy Tech Village,",
+        href: null,
+      },
+      {
+        id: crypto.randomUUID(),
+        label: "Outer Ring Road, Devarabeesanahalli Village,",
+        href: null,
+      },
+      {
+        id: crypto.randomUUID(),
+        label: "Bengaluru, 560103,",
+        href: null,
+      },
+      {
+        id: crypto.randomUUID(),
+        label: "Karnataka, India",
+        href: null,
+      },
+      {
+        id: crypto.randomUUID(),
+        label: "CIN : U51109KA2012PTC066107",
+        href: null,
+      },
+      {
+        id: crypto.randomUUID(),
+        label: "Telephone : ",
+        extra: [
+          {
+            label: "044-45614700",
+            href: "tel:04445614700",
+          },
+          {
+            label: "044-67415800",
+            href: "tel:04467415800",
+          },
+        ],
+      },
+    ],
+  },
+];
 
