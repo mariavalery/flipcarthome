@@ -110,7 +110,15 @@ import giftcards from "../assets/end footer icon/giftcards.svg";
 import helpcenterfooter from "../assets/end footer icon/helpcentre.svg";
 
 
-
+export const trendingNavbarItems=[
+    {id:crypto.randomUUID(),label:"mobiles"},
+    {id:crypto.randomUUID(),label:"shoes"},
+    {id:crypto.randomUUID(),label:"t shirts"},
+    {id:crypto.randomUUID(),label:"laptops"},
+    {id:crypto.randomUUID(),label:"watches"},
+    {id:crypto.randomUUID(),label:"tv"},
+    {id:crypto.randomUUID(),label:"sarees"}
+  ]
 
 export const loginmenuItems = [
   { icon: usericon, label: "My Profile", href: "/myprofile" },

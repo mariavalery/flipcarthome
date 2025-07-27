@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState,useEffect,useRef } from "react";
 import logo from "../assets/flipkartlogo.svg";
+import searchicon from "../assets/searchicon.svg";
 import usericon from "../assets/usericon.svg";
 import shortcuticon from "../assets/shortcuticon.svg";
 import baricon from "../assets/baricon.svg";
@@ -9,11 +10,27 @@ import userwhiteicon from "../assets/userwhiteicon.svg";
 import storeicon from "../assets/storeicon.svg";
 import carticon from "../assets/carticon.svg";
 import eclipsedoticon from "../assets/eclipsedoticon.svg";
+import { trendingNavbarItems } from "../items/ItemsArray";
+
 function HomeNavbar({ items1, items2 }) {
   const [isLoginHovered, setIsLoginHovered] = useState(false);
   const [isHelpHovered, setIsHelpHovered] = useState(false);
+  const [isSearchOpen,setIsSearchOpen]=useState(false);
+  const searchWrapper=useRef(null);
+
+  useEffect(()=>{
+    function handleOpenClick(event){
+      if(searchWrapper.current && !searchWrapper.current.contains(event.target)){
+        setIsSearchOpen(false)
+      }
+    }
+    document.addEventListener("mousedown",handleOpenClick);
+    return(()=>
+    document.removeEventListener("mousedown",handleOpenClick))
+  },[])
 
   return (
+
     <nav className="w-full h-16 bg-white px-4 py-2 flex justify-between items-center relative shadow-sm ">
       {/* threeBar */}
 
@@ -33,34 +50,16 @@ function HomeNavbar({ items1, items2 }) {
         </a>
 
         {/* Search Bar */}
+   
         <div
-          className="hidden md:flex flex-1 items-center bg-blue-50 px-2 py-1 rounded-md"
+          className="hidden relative md:flex flex-1 items-center bg-blue-50 px-2 py-1 rounded-md z-20"
           title="Search for Products, Brands and More"
+          ref={searchWrapper}
+          onFocus={()=>setIsSearchOpen(true)}
         >
           <div>
             <button>
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10.5 18C14.6421 18 18 14.6421 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18Z"
-                  stroke="#717478"
-                  strokeWidth="1.4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                ></path>
-                <path
-                  d="M16 16L21 21"
-                  stroke="#717478"
-                  strokeWidth="1.4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                ></path>
-              </svg>
+              <img src={searchicon}/>
             </button>
           </div>
           <input
@@ -68,6 +67,17 @@ function HomeNavbar({ items1, items2 }) {
             placeholder="Search for Products, Brands and More"
             className="bg-transparent outline-none font-normal text-lg w-full ml-2"
           />
+          {isSearchOpen && (<div className="absolute left-0 w-full top-full bg-white rounded-b-md ">
+            <h4 className="px-4 py-4 font-medium text-gray-500">Trending</h4>
+            <ul>
+              {trendingNavbarItems.map((item)=>(
+                <li key={item.id} className="flex gap-3 py-3 px-2 hover:bg-blue-50">
+                  <img src={searchicon}/>
+                  <span>{item.label}</span>
+                </li>
+              ))}
+            </ul>
+          </div>)}
         </div>
       </div>
 
@@ -187,6 +197,7 @@ function HomeNavbar({ items1, items2 }) {
         </div>
       </div>
     </nav>
+    
   );
 }
 
