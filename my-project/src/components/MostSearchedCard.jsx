@@ -3,7 +3,7 @@ function MostSearchedCard({ linkItems }) {
   return (
     <div > 
     {linkItems.map((items,index)=>(     <div key={index} className="flex  flex-wrap text-md leading-tight px-1 py-1" >
-      <span className="text-sm font-normal ">{items.title} : </span>
+      <span className="text-sm font-normal pr-2">{items.title} : </span>
       {items?.categoryItems?.map((item, index) => (
         <div key={item.id}>
           <a className="text-xs  cursor-pointer" title={item.label}>
