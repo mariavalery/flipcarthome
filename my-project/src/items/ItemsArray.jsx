@@ -99,6 +99,19 @@ import Womenbra from "../assets/fashiontopdeals/Women Bra.webp";
 import Womendress from "../assets/fashiontopdeals/Women Dresses.webp";
 import Womenshirts from "../assets/fashiontopdeals/Women Shirts.webp";
 import Womennightsuits from "../assets/fashiontopdeals/Womens Nightsuit.webp";
+import facebook from "../assets/social links icon/facebook.svg";
+import twitter from "../assets/social links icon/twitter.svg";
+import instagram from "../assets/social links icon/instagram.svg";
+import youtube from "../assets/social links icon/youtube.svg";
+
+import seller from "../assets/end footer icon/seller.svg";
+import advertisefooter from "../assets/end footer icon/advertise.svg";
+import giftcards from "../assets/end footer icon/giftcards.svg";
+import helpcenterfooter from "../assets/end footer icon/helpcentre.svg";
+
+
+
+
 export const loginmenuItems = [
   { icon: usericon, label: "My Profile", href: "/myprofile" },
   { icon: fkplus, label: "Flipkart Plus Zone", href: "/flipkartpluszone" },
@@ -1298,25 +1311,25 @@ export const footerExtraSections = [
       {
         
         id: crypto.randomUUID(),
-        icon: "FaFacebookF",
+        icon: facebook,
         label: "Facebook",
         href: "https://www.facebook.com/flipkart",
       },
       {
         id: crypto.randomUUID(),
-        icon: "FaXTwitter",
+        icon: twitter,
         label: "X",
         href: "https://twitter.com/flipkart",
       },
       {
         id: crypto.randomUUID(),
-        icon: "FaYoutube",
+        icon: youtube,
         label: "YouTube",
         href: "https://www.youtube.com/flipkart",
       },
       {
         id: crypto.randomUUID(),
-        icon: "FaInstagram",
+        icon: instagram,
         label: "Instagram",
         href: "https://www.instagram.com/flipkart",
       },
@@ -1363,18 +1376,24 @@ export const footerExtraSections = [
       {
         id: crypto.randomUUID(),
         label: "Telephone : ",
-        extra: [
+         href: "tel:04445614700",
+        extra: 
           {
-            label: "044-45614700",
-            href: "tel:04445614700",
+            sublabel: "044-45614700 / 044-67415800",
+           
           },
-          {
-            label: "044-67415800",
-            href: "tel:04467415800",
-          },
-        ],
+         
+        
       },
     ],
   },
 ];
 
+export const endFooterIcons=[{
+  id:crypto.randomUUID(),
+  label:"Become a Seller",
+  icon:seller},{id:crypto.randomUUID(),label:"Advertise",
+  icon:advertisefooter},{id:crypto.randomUUID(),label:"Gift Cards",
+  icon:giftcards},{id:crypto.randomUUID(),label:"Help Center",
+  icon:helpcenterfooter}
+];
