@@ -66,7 +66,7 @@ function HomeNavbar({ items1, items2 }) {
           <input
             type="text"
             placeholder="Search for Products, Brands and More"
-            className="bg-transparent outline-none text-sm w-full"
+            className="bg-transparent outline-none font-normal text-lg w-full ml-2"
           />
         </div>
       </div>
