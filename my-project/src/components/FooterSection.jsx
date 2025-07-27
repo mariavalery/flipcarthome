@@ -324,7 +324,7 @@ function FooterSection() {
             </div>
 </div>
               {/* Copy rights content */}
-         <div className="flex px-8 text-white border-b-0 lg:border-t lg:border-[#454d5e] py-5">
+         <div className="flex px-8 text-white border-b-0 lg:border-t lg:border-[#454d5e] pt-5 mt-3">
             <div className="flex gap-8 mx-5">
              {endFooterIcons.map((item)=>(
               <div className="flex gap-2">
