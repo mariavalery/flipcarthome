@@ -53,18 +53,19 @@ function HomeNavbar({ items1, items2 }) {
    
         <div
           className="hidden relative md:flex flex-1 items-center bg-blue-50 px-2 py-1 rounded-md z-30"
-          title="Search for Products, Brands and More"
+          
           ref={searchWrapper}
           onFocus={()=>setIsSearchOpen(true)}
         >
           <div>
-            <button>
+            <button title="Search for Products, Brands and More">
               <img src={searchicon}/>
             </button>
           </div>
           <input
             type="text"
             placeholder="Search for Products, Brands and More"
+            title="Search for Products, Brands and More"
             className="bg-transparent outline-none font-normal text-lg w-full ml-2"
           />
           {isSearchOpen && (<div className="absolute left-0 w-full top-full bg-white rounded-b-md ">

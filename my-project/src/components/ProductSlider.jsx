@@ -63,7 +63,7 @@ function ProductSlider({ items, title, bannerImg,showNavigation }) {
           {showNavigation && !isShifted && (
             <button
               onClick={handleNext}
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 w-10 h-20 z-10 bg-white shadow-lg border-none hidden md:flex"
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 w-10 h-20 z-10 bg-white shadow-lg border-none hidden md:flex justify-center items-center"
             >
               <FaChevronRight />
             </button>
