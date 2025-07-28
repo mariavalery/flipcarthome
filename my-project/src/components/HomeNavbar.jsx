@@ -31,7 +31,7 @@ function HomeNavbar({ items1, items2 }) {
 
   return (
 
-    <nav className="fixed top-0 left-0 w-full h-16 bg-white px-4 py-2 flex justify-between items-center  shadow-sm ">
+    <nav className="fixed top-0 left-0 z-50 w-full h-16 bg-white px-4 py-2 flex justify-between items-center  shadow-sm ">
       {/* threeBar */}
 
       <div className=" md:hidden flex-shrink-0">
@@ -52,7 +52,7 @@ function HomeNavbar({ items1, items2 }) {
         {/* Search Bar */}
    
         <div
-          className="hidden relative md:flex flex-1 items-center bg-blue-50 px-2 py-1 rounded-md z-20"
+          className="hidden relative md:flex flex-1 items-center bg-blue-50 px-2 py-1 rounded-md z-30"
           title="Search for Products, Brands and More"
           ref={searchWrapper}
           onFocus={()=>setIsSearchOpen(true)}
