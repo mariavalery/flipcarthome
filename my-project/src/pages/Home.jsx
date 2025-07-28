@@ -34,7 +34,9 @@ import FooterSection from "../components/FooterSection";
 function Home() {
   return (
     <div className="bg-[#f5f5f5] min-h-screen ">
+      <div>
       <HomeNavbar items1={loginmenuItems} items2={helpmenuItems} />
+       <div className="py-2">
       <Categorymenu items={categoryItems} />
       <HomeTopCaroussel items={homeSliderItems} />
       <ProductSlider
@@ -107,6 +109,8 @@ function Home() {
       <ProductSlider items={topDeals} title="Top Deals" showNavigation={true} />
       <ProductSlider items={electronicSlidesItem} title="Top Deals On Appliances" showNavigation={false} />
       <FooterSection/>
+     </div>
+    </div>
     </div>
   );
 }

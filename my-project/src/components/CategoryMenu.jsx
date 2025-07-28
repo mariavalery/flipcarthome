@@ -1,6 +1,6 @@
 function Categorymenu({ items }) {
   return (
-    <div className="bg-white shadow-md md:mx-4 md:my-2">
+    <div className="bg-white shadow-md md:mx-4 mt-20">
       <div className="flex items-center py-4 px-6 gap-8 overflow-x-auto scrollbar-hide md:w-full max-w-screen-xl mx-auto ">
         {items.map((item, index) => (
           <div

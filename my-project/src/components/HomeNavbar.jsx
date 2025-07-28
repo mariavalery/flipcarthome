@@ -31,7 +31,7 @@ function HomeNavbar({ items1, items2 }) {
 
   return (
 
-    <nav className="w-full h-16 bg-white px-4 py-2 flex justify-between items-center relative shadow-sm ">
+    <nav className="fixed top-0 left-0 w-full h-16 bg-white px-4 py-2 flex justify-between items-center  shadow-sm ">
       {/* threeBar */}
 
       <div className=" md:hidden flex-shrink-0">
