@@ -1,6 +1,5 @@
 import { useState,useEffect,useRef } from "react";
 import logo from "../assets/flipkartlogo.svg";
-import searchicon from "../assets/searchicon.svg";
 import usericon from "../assets/usericon.svg";
 import shortcuticon from "../assets/shortcuticon.svg";
 import baricon from "../assets/baricon.svg";
@@ -10,7 +9,8 @@ import userwhiteicon from "../assets/userwhiteicon.svg";
 import storeicon from "../assets/storeicon.svg";
 import carticon from "../assets/carticon.svg";
 import eclipsedoticon from "../assets/eclipsedoticon.svg";
-import { trendingNavbarItems } from "../items/ItemsArray";
+import SearchAutoSuggestion from "./SearchAutoSuggestion";
+import searchicon from "../assets/searchicon.svg";
 
 function HomeNavbar({ items1, items2 }) {
   const [isLoginHovered, setIsLoginHovered] = useState(false);
@@ -68,17 +68,7 @@ function HomeNavbar({ items1, items2 }) {
             title="Search for Products, Brands and More"
             className="bg-transparent outline-none font-normal text-lg w-full ml-2"
           />
-          {isSearchOpen && (<div className="absolute left-0 w-full top-full bg-white rounded-b-md ">
-            <h4 className="px-4 py-4 font-medium text-gray-500">Trending</h4>
-            <ul>
-              {trendingNavbarItems.map((item)=>(
-                <li key={item.id} className="flex gap-3 py-3 px-2 hover:bg-blue-50">
-                  <img src={searchicon}/>
-                  <span>{item.label}</span>
-                </li>
-              ))}
-            </ul>
-          </div>)}
+          {isSearchOpen && <SearchAutoSuggestion/> }
         </div>
       </div>
 

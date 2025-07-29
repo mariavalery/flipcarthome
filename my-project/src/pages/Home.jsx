@@ -22,14 +22,13 @@ import {
   fashionTopDeals,
   furnituresTopDeals,
   topDeals,
-  // mostSearchedFooterLinks,
-  // mobileLinks,
+  
  
 } from "../items/ItemsArray";
 import flightbanner from "../assets/flightbanner.webp";
 import TopDealsBanner from "../components/TopDealsBanner";
-import MostSearchedCard from "../components/MostSearchedCard";
 import FooterSection from "../components/FooterSection";
+import FooterCopyright from "../components/FooterCopyright";
 
 function Home() {
   return (
@@ -109,6 +108,7 @@ function Home() {
       <ProductSlider items={topDeals} title="Top Deals" showNavigation={true} />
       <ProductSlider items={electronicSlidesItem} title="Top Deals On Appliances" showNavigation={false} />
       <FooterSection/>
+      <FooterCopyright/>
      </div>
     </div>
     </div>
