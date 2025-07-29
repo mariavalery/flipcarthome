@@ -70,6 +70,7 @@ function HomeNavbar({ items1, items2 }) {
             className="bg-transparent outline-none font-normal text-lg w-full ml-2"
           />
           {isSearchOpen && <SearchAutoSuggestion/> }
+          {isSearchOpen && <SearchAutoSuggestion/> }
         </div>
       </div>
 
