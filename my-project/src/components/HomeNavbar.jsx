@@ -12,12 +12,13 @@ import eclipsedoticon from "../assets/eclipsedoticon.svg";
 import SearchAutoSuggestion from "./SearchAutoSuggestion";
 import searchicon from "../assets/searchicon.svg";
 
+
 function HomeNavbar({ items1, items2 }) {
   const [isLoginHovered, setIsLoginHovered] = useState(false);
   const [isHelpHovered, setIsHelpHovered] = useState(false);
   const [isSearchOpen,setIsSearchOpen]=useState(false);
   const searchWrapper=useRef(null);
-
+  
   useEffect(()=>{
     function handleOpenClick(event){
       if(searchWrapper.current && !searchWrapper.current.contains(event.target)){
@@ -84,6 +85,7 @@ function HomeNavbar({ items1, items2 }) {
           onMouseEnter={() => setIsLoginHovered(true)}
           onMouseLeave={() => setIsLoginHovered(false)}
         >
+          <a href="/login">
           <div
             className={`inline-flex items-center px-2 py-0 rounded-md cursor-pointer text-md ${
               isLoginHovered ? "bg-blue-600 text-white" : "text-gray-800"
@@ -103,6 +105,7 @@ function HomeNavbar({ items1, items2 }) {
               }`}
             />
           </div>
+          </a>
 
           {isLoginHovered && (
             <div className="absolute top-full mt-2 left-0 bg-white shadow-md rounded-md w-56 z-50 text-sm cursor-pointer">

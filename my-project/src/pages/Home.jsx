@@ -32,10 +32,10 @@ import FooterCopyright from "../components/FooterCopyright";
 
 function Home() {
   return (
-    <div className="bg-[#f5f5f5] min-h-screen ">
+    <div className="bg-[#f5f5f5] ">
       <div>
       <HomeNavbar items1={loginmenuItems} items2={helpmenuItems} />
-       <div className="py-2">
+       <div className="py-2 ">
       <Categorymenu items={categoryItems} />
       <HomeTopCaroussel items={homeSliderItems} />
       <ProductSlider
