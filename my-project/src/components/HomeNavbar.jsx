@@ -32,7 +32,7 @@ function HomeNavbar({ items1, items2 }) {
 
   return (
 
-    <nav className="fixed top-0 left-0 z-50 w-full h-16 bg-white px-4 py-2 flex justify-between items-center  shadow-sm ">
+    <nav className="fixed top-0 left-0 z-50 w-full h-16 bg-white px-2 sm:px-4 py-2 flex justify-start items-center  shadow-sm ">
       {/* threeBar */}
 
       <div className=" md:hidden flex-shrink-0">
@@ -40,13 +40,13 @@ function HomeNavbar({ items1, items2 }) {
       </div>
 
       {/* Logo */}
-      <div className="flex flex-1 items-center px-2 gap-2">
-        <a href="/" className="flex-shrink-0">
+      <div className="flex flex-1  md:px-2 md:gap-2">
+        <a href="/" className="md:flex-shrink-0">
           <img
             src={logo}
             title="Flipkart"
             alt="flipkart-logo"
-            className=" h-10 min-w-[140px]  object-contain"
+            className=" h-10 min-w-[140px] object-contain"
           />
         </a>
 
@@ -75,9 +75,9 @@ function HomeNavbar({ items1, items2 }) {
       </div>
 
       {/* Right Section */}
-      <div className="flex items-center text-gray-800 text-md gap-4">
+      <div className="flex items-center text-gray-800 text-md gap-2 md:gap-4">
         {/* Shortcut*/}
-        <div className=" md:hidden flex-shrink-0">
+        <div className=" md:hidden md:flex-shrink-0">
           <img src={shortcuticon} />
         </div>
         {/* Login Dropdown */}
@@ -88,7 +88,7 @@ function HomeNavbar({ items1, items2 }) {
         >
           <a href="/login">
           <div
-            className={`inline-flex items-center px-2 py-0 rounded-md cursor-pointer text-md ${
+            className={`inline-flex items-center md:px-2 py-0 rounded-md cursor-pointer text-md ${
               isLoginHovered ? "bg-blue-600 text-white" : "text-gray-800"
             }`}
             title="Login"
@@ -96,7 +96,7 @@ function HomeNavbar({ items1, items2 }) {
             <img
               src={isLoginHovered ? userwhiteicon : usericon}
               alt="user-icon"
-              className="mr-1"
+              className="md:mr-1"
             />
             <span>Login</span>
             <img
@@ -142,7 +142,7 @@ function HomeNavbar({ items1, items2 }) {
         <a
           href="/Cart"
           title="Cart"
-          className="flex flex-shrink-0 items-center px-1 py-0 gap-2 cursor-pointer md:mr-0 ml-4"
+          className="flex flex-shrink-0  md:px-1 py-0 gap-0 md:gap-2 cursor-pointer md:mr-0 md:ml-4"
         >
           <img src={carticon} alt="cart-icon" />
           <span className="hidden md:flex">Cart</span>

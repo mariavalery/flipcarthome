@@ -7,7 +7,7 @@ function FooterSection() {
  
   return (
     <div>
-      <footer className="hidden md:flex text-[#87878a]">
+      <footer className=" text-[#87878a]">
         <div className="mx-4 my-2 px-4 py-2 w-full">
           {/* Top Stories */}
           <div className="text-md font-medium">

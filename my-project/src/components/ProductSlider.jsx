@@ -14,7 +14,7 @@ function ProductSlider({ items, title, bannerImg,showNavigation }) {
     : items.slice(0, 6);
 
   return (
-    <div className="flex mx-4 my-2 bg-white w-full">
+    <div className="flex md:mx-4 my-2 bg-white w-full">
       <div className="flex-1 ">
         <div className="py-2 px-4 font-semibold">{title}</div>
         <div className="relative  mx-2 text-lg font-semibold">

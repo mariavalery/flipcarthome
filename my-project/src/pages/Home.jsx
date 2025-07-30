@@ -107,8 +107,10 @@ function Home() {
       />
       <ProductSlider items={topDeals} title="Top Deals" showNavigation={true} />
       <ProductSlider items={electronicSlidesItem} title="Top Deals On Appliances" showNavigation={false} />
+      <footer className="hidden md:flex md:flex-col">
       <FooterSection/>
       <FooterCopyright/>
+      </footer>
      </div>
     </div>
     </div>

@@ -2,7 +2,7 @@ import { FaChevronRight } from "react-icons/fa";
 
 function TopDealsBanner({ items, title }) {
   return (
-    <div className="bg-white mx-4 my-2 md:w-6/12 p-4 rounded shadow ">
+    <div className="bg-white md:mx-4 my-2 md:w-6/12 p-4 rounded shadow ">
       <div className="flex justify-between ">
         <header className="text :xl md:text-2xl font-semibold py-2 px-4 ">
           {title}
@@ -28,18 +28,18 @@ function TopDealsBanner({ items, title }) {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 gap-2 md:gap-4 ">
         {items.map((item) => (
           <div
             key={item.id}
-            className="flex-col items-center border border-gray-200 p-3 rounded "
+            className="flex-col items-center border border-gray-200 px-3 rounded "
           >
             <img
               src={item.icon}
               alt={item.label}
               className="w-[296px] h-[296px] md:w-[139px] md:h-[139px] object-contain"
             />
-            <div className="px-4 w-40 md:w-62">
+            <div className="px-2 w-36 md:w-62">
               <p className="font-medium text-gray-800  truncate ">
                 {item.label}
               </p>
