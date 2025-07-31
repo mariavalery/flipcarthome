@@ -15,7 +15,7 @@ function HomeTopCaroussel({ items }) {
   }, [slideCount]);
 
   return (
-    <div className="relative bg-white   my-4 md:mx-4">
+    <div className="relative bg-white  my-4 md:mx-4">
       {/* Left Button */}
       <div className="hidden md:flex">
         <button

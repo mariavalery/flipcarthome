@@ -1,27 +1,81 @@
-import commonflipkartlogo from "../assets/common nav icons/common flipkart logo.png"
-import pluslogo from "../assets/common nav icons/plus logo.png"
+import commonflipkartlogo from "../assets/common nav icons/common flipkart logo.png";
+import pluslogo from "../assets/common nav icons/plus logo.png";
+
 function CommonNavbar() {
   return (
-    
-       <nav className="fixed top-0 left-0 z-50 w-full h-16 bg-blue-700 px-4 py-2 flex justify-between items-center  shadow-sm ">
-        <div>
-             {/* Logo Section */}
-            <div className="flex flex-col ">
-                <a href="/">
-                <img src={commonflipkartlogo} className="w-20" href="/login"/>
-                </a>
-                <div className="flex text-white ">
-                   <a href="/" className="hover:underline text-gray-50" >
-                   Explore
-                   <span className="text-yellow-500  font-serif px-1">Plus</span>
-                   </a>
-                   <img src={pluslogo} className="w-5 "/>
-                </div>
-            </div>
-        </div>
-       </nav>
+    <nav className="fixed top-0 left-0 z-10 w-full h-[56px] text-[10px] bg-[#2874f0] text-[#f0f0f0] flex items-center gap-2 overflow-hidden">
+      <div className="min-w-[30px] md:min-w-[120px]" />
 
-  )
+      <div className="flex items-center w-full overflow-x-auto">
+        {/* Logo Section */}
+        <div className="flex flex-col flex-wrap md:flex-nowrap md:m-8 m-1 flex-shrink-0">
+          <a href="/">
+            <img src={commonflipkartlogo} className="md:w-20 w-10" />
+          </a>
+          <div className="flex items-center">
+            <a href="/" className="hover:border-b border-white">
+              Explore
+              <span className="text-yellow-500 font-serif px-1">Plus</span>
+            </a>
+            <img src={pluslogo} className="w-2 md:w-4" />
+          </div>
+        </div>
+
+        {/* Search Bar */}
+        <div className="w-full max-w-60 md:max-w-xl m-1 flex-shrink">
+          <div className="relative bg-white px-1 py-1 rounded flex items-center">
+            <input
+              placeholder="Search for Products and More"
+              title="Search for Products and More"
+              className="w-full outline-none text-sm text-black px-2"
+            />
+            <button className="px-1 w-6">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.5 18C14.6421 18 18 14.6421 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18Z"
+                  stroke="blue"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M16 16L21 21"
+                  stroke="blue"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Right Section */}
+        <div className="flex items-center gap-2 md:gap-6 text-[10px] md:text-sm whitespace-nowrap flex-shrink-0 mr-1 ">
+          <button className="text-[#5f4eeb] font-medium bg-white px-2 md:px-4 py-1 rounded">
+            Login
+          </button>
+          <span className="inline md:inline">Become a Seller</span>
+          <span className="inline md:inline">More</span>
+          <div className="hidden md:inline-flex items-center">
+            <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.25 17.25H6.54545L3.93015 2.86584C3.89873 2.69303 3.80766 2.53673 3.67281 2.42419C3.53796 2.31164 3.36789 2.25 3.19225 2.25H1.5" stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M7.5 21C8.53553 21 9.375 20.1605 9.375 19.125C9.375 18.0895 8.53553 17.25 7.5 17.25C6.46447 17.25 5.625 18.0895 5.625 19.125C5.625 20.1605 6.46447 21 7.5 21Z" stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M17.25 21C18.2855 21 19.125 20.1605 19.125 19.125C19.125 18.0895 18.2855 17.25 17.25 17.25C16.2145 17.25 15.375 18.0895 15.375 19.125C15.375 20.1605 16.2145 21 17.25 21Z" stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M5.86363 13.5H17.6345C17.9858 13.5 18.3259 13.3767 18.5956 13.1516C18.8653 12.9265 19.0475 12.6139 19.1103 12.2683L20.25 6H4.5" stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            <span>Cart</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
 }
 
-export default CommonNavbar
+export default CommonNavbar;
