@@ -1,12 +1,27 @@
+import { useEffect, useRef, useState } from "react";
 import commonflipkartlogo from "../assets/common nav icons/common flipkart logo.png";
 import pluslogo from "../assets/common nav icons/plus logo.png";
-
+import SearchAutoSuggestion from "../components/SearchAutoSuggestion";
 function CommonNavbar() {
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const searchWrapper = useRef(null);
+
+  useEffect(() => {
+    function handleClickOpen(e) {
+      if (searchWrapper.current && !searchWrapper.current.contains(e.target)) {
+        setIsSearchOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOpen);
+    return(()=>{
+       document.removeEventListener("mousedown", handleClickOpen)
+    })
+  }, []);
   return (
-    <nav className="fixed top-0 left-0 z-10 w-full h-[56px] text-[10px] bg-[#2874f0] text-[#f0f0f0] flex items-center gap-2 overflow-hidden">
+    <nav className="fixed top-0 left-0 z-10 w-full h-[56px] text-[10px] bg-[#2874f0] text-[#f0f0f0] flex items-center gap-2 ">
       <div className="min-w-[30px] md:min-w-[120px]" />
 
-      <div className="flex items-center w-full overflow-x-auto">
+      <div className="flex items-center w-full ">
         {/* Logo Section */}
         <div className="flex flex-col flex-wrap md:flex-nowrap md:m-8 m-1 flex-shrink-0">
           <a href="/">
@@ -22,8 +37,14 @@ function CommonNavbar() {
         </div>
 
         {/* Search Bar */}
-        <div className="w-full max-w-60 md:max-w-xl m-1 flex-shrink">
-          <div className="relative bg-white px-1 py-1 rounded flex items-center">
+        <div
+         ref={searchWrapper}
+          onFocus={() => setIsSearchOpen(true)}
+          className="relative  w-full max-w-60 md:max-w-xl m-1 flex-1 "
+        >
+          <div   
+          className=" bg-white px-1 py-1 rounded flex items-center">
+          
             <input
               placeholder="Search for Products and More"
               title="Search for Products and More"
@@ -53,22 +74,53 @@ function CommonNavbar() {
                 />
               </svg>
             </button>
+             {isSearchOpen && <SearchAutoSuggestion />}
           </div>
+        
         </div>
-
+ 
         {/* Right Section */}
-        <div className="flex items-center gap-2 md:gap-6 text-[10px] md:text-sm whitespace-nowrap flex-shrink-0 mr-1 ">
+        <div className="flex items-center gap-2 md:gap-6 font-bold text-[10px] md:text-sm whitespace-nowrap flex-shrink-0 mr-1 ">
           <button className="text-[#5f4eeb] font-medium bg-white px-2 md:px-4 py-1 rounded">
             Login
           </button>
           <span className="inline md:inline">Become a Seller</span>
           <span className="inline md:inline">More</span>
           <div className="hidden md:inline-flex items-center">
-            <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17.25 17.25H6.54545L3.93015 2.86584C3.89873 2.69303 3.80766 2.53673 3.67281 2.42419C3.53796 2.31164 3.36789 2.25 3.19225 2.25H1.5" stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M7.5 21C8.53553 21 9.375 20.1605 9.375 19.125C9.375 18.0895 8.53553 17.25 7.5 17.25C6.46447 17.25 5.625 18.0895 5.625 19.125C5.625 20.1605 6.46447 21 7.5 21Z" stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M17.25 21C18.2855 21 19.125 20.1605 19.125 19.125C19.125 18.0895 18.2855 17.25 17.25 17.25C16.2145 17.25 15.375 18.0895 15.375 19.125C15.375 20.1605 16.2145 21 17.25 21Z" stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M5.86363 13.5H17.6345C17.9858 13.5 18.3259 13.3767 18.5956 13.1516C18.8653 12.9265 19.0475 12.6139 19.1103 12.2683L20.25 6H4.5" stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+            <svg
+              className="h-4 w-4"
+              viewBox="0 0 24 24"
+              fill="white"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.25 17.25H6.54545L3.93015 2.86584C3.89873 2.69303 3.80766 2.53673 3.67281 2.42419C3.53796 2.31164 3.36789 2.25 3.19225 2.25H1.5"
+                stroke="white"
+                strokeWidth="1.4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M7.5 21C8.53553 21 9.375 20.1605 9.375 19.125C9.375 18.0895 8.53553 17.25 7.5 17.25C6.46447 17.25 5.625 18.0895 5.625 19.125C5.625 20.1605 6.46447 21 7.5 21Z"
+                stroke="white"
+                strokeWidth="1.4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M17.25 21C18.2855 21 19.125 20.1605 19.125 19.125C19.125 18.0895 18.2855 17.25 17.25 17.25C16.2145 17.25 15.375 18.0895 15.375 19.125C15.375 20.1605 16.2145 21 17.25 21Z"
+                stroke="white"
+                strokeWidth="1.4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M5.86363 13.5H17.6345C17.9858 13.5 18.3259 13.3767 18.5956 13.1516C18.8653 12.9265 19.0475 12.6139 19.1103 12.2683L20.25 6H4.5"
+                stroke="white"
+                strokeWidth="1.4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
             <span>Cart</span>
           </div>
