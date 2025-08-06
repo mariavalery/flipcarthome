@@ -2,8 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import commonflipkartlogo from "../assets/common nav icons/common flipkart logo.png";
 import pluslogo from "../assets/common nav icons/plus logo.png";
 import SearchAutoSuggestion from "../components/SearchAutoSuggestion";
-function CommonNavbar() {
+function CommonNavbar({loginmenuItems,helpmenuItems}) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isLoginHovered, setIsLoginHovered] = useState(false);
+  const [isHelpHovered, setIsHelpHovered] = useState(false);
   const searchWrapper = useRef(null);
 
   useEffect(() => {
@@ -81,11 +83,56 @@ function CommonNavbar() {
  
         {/* Right Section */}
         <div className="flex items-center gap-2 md:gap-6 font-bold text-[10px] md:text-sm whitespace-nowrap flex-shrink-0 mr-1 ">
-          <button className="text-[#5f4eeb] font-medium bg-white px-2 md:px-4 py-1 rounded">
+          <button className=" relative text-[#5f4eeb] font-medium bg-white px-2 md:px-4 py-1 rounded" onMouseEnter={()=>setIsLoginHovered(true)} onMouseLeave={()=>setIsLoginHovered(false)}>
             Login
+            {isLoginHovered && (
+            <div className="absolute top-full mt-2 left-0 bg-white shadow-md rounded-md w-56 z-50 text-sm cursor-pointer">
+              <div
+                className="p-3 border-b flex justify-between items-center "
+                title="Sign Up"
+              >
+                <span className="text-gray-500 ">New Customer?</span>
+                <a href="/Signup" className="text-blue-600 font-semibold">
+                  Sign Up
+                </a>
+              </div>
+
+              <ul className="p-2 space-y-2 text-black font-normal">
+                {loginmenuItems.map((item, index) => (
+                  <li key={index}>
+                    <a
+                      href={item.href}
+                      className="flex items-center gap-2 hover:bg-gray-100 px-4 py-1 cursor-pointer rounded"
+                      title={item.label}
+                    >
+                      <img src={item.icon} alt={item.label} />
+                      <span>{item.label}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
           </button>
-          <span className="inline md:inline">Become a Seller</span>
-          <span className="inline md:inline">More</span>
+          <span className="inline ">Become a Seller</span>
+          <span className="relative inline " onMouseEnter={()=>setIsHelpHovered(true)} onMouseLeave={()=>setIsHelpHovered(false)}>More  {isHelpHovered && (
+            <div className="absolute top-full right-0 mt-2 bg-white shadow-lg rounded-lg w-56 z-50 text-sm">
+              <ul className="p-2 space-y-2 text-black font-normal">
+                {helpmenuItems.map((item, index) => (
+                  <li key={index}>
+                    <a
+                      href={item.href}
+                      className="flex items-center gap-2 hover:bg-gray-100 px-4 py-1 cursor-pointer rounded"
+                      title={item.label}
+                    >
+                      <img src={item.icon} alt={item.label} />
+                      <span>{item.label}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}</span>
           <div className="hidden md:inline-flex items-center">
             <svg
               className="h-4 w-4"

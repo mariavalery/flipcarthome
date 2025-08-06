@@ -13,11 +13,12 @@ import SearchAutoSuggestion from "./SearchAutoSuggestion";
 import searchicon from "../assets/searchicon.svg";
 
 
-function HomeNavbar({ items1, items2 }) {
+function HomeNavbar({ loginmenuItems, helpmenuItems }) {
   const [isLoginHovered, setIsLoginHovered] = useState(false);
   const [isHelpHovered, setIsHelpHovered] = useState(false);
   const [isSearchOpen,setIsSearchOpen]=useState(false);
   const searchWrapper=useRef(null);
+  console.log(loginmenuItems)
   
   useEffect(()=>{
     function handleOpenClick(event){
@@ -121,7 +122,7 @@ function HomeNavbar({ items1, items2 }) {
               </div>
 
               <ul className="p-2 space-y-2">
-                {items1.map((item, index) => (
+                {loginmenuItems.map((item, index) => (
                   <li key={index}>
                     <a
                       href={item.href}
@@ -174,7 +175,7 @@ function HomeNavbar({ items1, items2 }) {
           {isHelpHovered && (
             <div className="absolute top-full right-0 mt-2 bg-white shadow-lg rounded-lg w-56 z-50 text-sm">
               <ul className="p-2 space-y-2">
-                {items2.map((item, index) => (
+                {helpmenuItems.map((item, index) => (
                   <li key={index}>
                     <a
                       href={item.href}

@@ -34,7 +34,7 @@ function Home() {
   return (
     <div className="bg-[#f5f5f5] ">
       <div>
-      <HomeNavbar items1={loginmenuItems} items2={helpmenuItems} />
+      <HomeNavbar loginmenuItems={loginmenuItems} helpmenuItems={helpmenuItems} />
        <div className="py-2 ">
       <Categorymenu items={categoryItems} />
       <HomeTopCaroussel items={homeSliderItems} />
