@@ -2,7 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import commonflipkartlogo from "../assets/common nav icons/common flipkart logo.png";
 import pluslogo from "../assets/common nav icons/plus logo.png";
 import SearchAutoSuggestion from "../components/SearchAutoSuggestion";
-function CommonNavbar({loginmenuItems,helpmenuItems}) {
+import arrowupicon from "../assets/arrowupicon.svg";
+import arrowdowniconwhite from "../assets/arrowdowniconwhite.svg";
+function CommonNavbar({ loginmenuItems, helpmenuItems }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isLoginHovered, setIsLoginHovered] = useState(false);
   const [isHelpHovered, setIsHelpHovered] = useState(false);
@@ -15,9 +17,9 @@ function CommonNavbar({loginmenuItems,helpmenuItems}) {
       }
     }
     document.addEventListener("mousedown", handleClickOpen);
-    return(()=>{
-       document.removeEventListener("mousedown", handleClickOpen)
-    })
+    return () => {
+      document.removeEventListener("mousedown", handleClickOpen);
+    };
   }, []);
   return (
     <nav className="fixed top-0 left-0 z-10 w-full h-[56px] text-[10px] bg-[#2874f0] text-[#f0f0f0] flex items-center gap-2 ">
@@ -40,13 +42,11 @@ function CommonNavbar({loginmenuItems,helpmenuItems}) {
 
         {/* Search Bar */}
         <div
-         ref={searchWrapper}
+          ref={searchWrapper}
           onFocus={() => setIsSearchOpen(true)}
           className="relative  w-full max-w-60 md:max-w-xl m-1 flex-1 "
         >
-          <div   
-          className=" bg-white px-1 py-1 rounded flex items-center">
-          
+          <div className=" bg-white px-1 py-1 rounded flex items-center">
             <input
               placeholder="Search for Products and More"
               title="Search for Products and More"
@@ -76,63 +76,95 @@ function CommonNavbar({loginmenuItems,helpmenuItems}) {
                 />
               </svg>
             </button>
-             {isSearchOpen && <SearchAutoSuggestion />}
+            {isSearchOpen && <SearchAutoSuggestion />}
           </div>
-        
         </div>
- 
-        {/* Right Section */}
-        <div className="flex items-center gap-2 md:gap-6 font-bold text-[10px] md:text-sm whitespace-nowrap flex-shrink-0 mr-1 ">
-          <button className=" relative text-[#5f4eeb] font-medium bg-white px-2 md:px-4 py-1 rounded" onMouseEnter={()=>setIsLoginHovered(true)} onMouseLeave={()=>setIsLoginHovered(false)}>
-            Login
-            {isLoginHovered && (
-            <div className="absolute top-full mt-2 left-0 bg-white shadow-md rounded-md w-56 z-50 text-sm cursor-pointer">
-              <div
-                className="p-3 border-b flex justify-between items-center "
-                title="Sign Up"
-              >
-                <span className="text-gray-500 ">New Customer?</span>
-                <a href="/Signup" className="text-blue-600 font-semibold">
-                  Sign Up
-                </a>
-              </div>
 
-              <ul className="p-2 space-y-2 text-black font-normal">
-                {loginmenuItems.map((item, index) => (
-                  <li key={index}>
-                    <a
-                      href={item.href}
-                      className="flex items-center gap-2 hover:bg-gray-100 px-4 py-1 cursor-pointer rounded"
-                      title={item.label}
-                    >
-                      <img src={item.icon} alt={item.label} />
-                      <span>{item.label}</span>
+        {/* Right Section */}
+        <div className=" flex items-center gap-2 md:gap-6 font-bold text-[10px] md:text-sm whitespace-nowrap flex-shrink-0 mr-1 ">
+          <div className="relative">
+            <button
+              className=" flex text-[#5f4eeb] font-medium bg-white px-2 md:px-4 py-1 rounded"
+              onMouseEnter={() => setIsLoginHovered(true)}
+              onMouseLeave={() => setIsLoginHovered(false)}
+            >
+              Login
+            </button>
+
+            {isLoginHovered && (
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 z-50">
+                {/* Triangle */}
+                <div
+                  className="absolute -top-[6px] left-1/2 border-l-[15px]  border-r-[15px] border-b-[8px] border-l-transparent border-r-transparent  border-b-white transform -translate-x-1/2 w-0 h-0"
+                />
+
+                {/* Dropdown panel */}
+                <div className="bg-white shadow-md rounded-md w-56 text-sm cursor-pointer">
+                  <div
+                    className="p-3 border-b flex justify-between items-center"
+                    title="Sign Up"
+                  >
+                    <span className="text-gray-500">New Customer?</span>
+                    <a href="/Signup" className="text-blue-600 font-semibold">
+                      Sign Up
                     </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-          </button>
+                  </div>
+                  <ul className="p-2 space-y-2 text-black font-normal">
+                    {loginmenuItems.map((item, index) => (
+                      <li key={index}>
+                        <a
+                          href={item.href}
+                          className="flex items-center gap-2 hover:bg-gray-100 px-4 py-1 cursor-pointer rounded"
+                          title={item.label}
+                        >
+                          <img src={item.icon} alt={item.label} />
+                          <span>{item.label}</span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            )}
+          </div>
+
           <span className="inline ">Become a Seller</span>
-          <span className="relative inline " onMouseEnter={()=>setIsHelpHovered(true)} onMouseLeave={()=>setIsHelpHovered(false)}>More  {isHelpHovered && (
-            <div className="absolute top-full right-0 mt-2 bg-white shadow-lg rounded-lg w-56 z-50 text-sm">
-              <ul className="p-2 space-y-2 text-black font-normal">
-                {helpmenuItems.map((item, index) => (
-                  <li key={index}>
-                    <a
-                      href={item.href}
-                      className="flex items-center gap-2 hover:bg-gray-100 px-4 py-1 cursor-pointer rounded"
-                      title={item.label}
-                    >
-                      <img src={item.icon} alt={item.label} />
-                      <span>{item.label}</span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}</span>
+          <div
+            className="relative flex top-full left-0"
+            onMouseEnter={() => setIsHelpHovered(true)}
+            onMouseLeave={() => setIsHelpHovered(false)}
+          >
+              <span>More</span>
+              <img
+              src={isHelpHovered ? arrowupicon : arrowdowniconwhite}
+              className={`ml-1  transition-transform duration-100 ${
+                isHelpHovered ? "rotate-180" : ""
+              }`}
+            />
+            {isHelpHovered && (
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 bg-white mt-2 shadow-lg rounded-lg w-56 z-50 text-sm">
+                 <div
+                  className="absolute -top-[6px] left-1/2 border-l-[15px]  border-r-[15px] border-b-[8px] border-l-transparent border-r-transparent  border-b-white transform -translate-x-1/2 w-0 h-0"
+                />
+                <ul className="p-2 space-y-2 text-black font-normal">
+                  {helpmenuItems.map((item, index) => (
+                    <li key={index}>
+                      <a
+                        href={item.href}
+                        className="flex items-center gap-2 hover:bg-gray-100 px-4 py-1 cursor-pointer rounded"
+                        title={item.label}
+                      >
+                        <img src={item.icon} alt={item.label} />
+                        <span>{item.label}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          
+            
+          </div>
           <div className="hidden md:inline-flex items-center">
             <svg
               className="h-4 w-4"
