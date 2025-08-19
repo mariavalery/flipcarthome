@@ -84,7 +84,7 @@ function CommonNavbar({ loginmenuItems, helpmenuItems }) {
         <div className=" flex items-center gap-2 md:gap-6 font-bold text-[10px] md:text-sm whitespace-nowrap flex-shrink-0 mr-1 ">
           <div className="relative">
             <button
-              className=" flex text-[#5f4eeb] font-medium bg-white px-2 md:px-4 py-1 rounded"
+              className=" flex text-[#5f4eeb]  bg-white px-2 md:px-4 py-1 rounded"
               onMouseEnter={() => setIsLoginHovered(true)}
               onMouseLeave={() => setIsLoginHovered(false)}
             >
@@ -92,10 +92,10 @@ function CommonNavbar({ loginmenuItems, helpmenuItems }) {
             </button>
 
             {isLoginHovered && (
-              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 z-50">
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 z-50">
                 {/* Triangle */}
                 <div
-                  className="absolute -top-[6px] left-1/2 border-l-[15px]  border-r-[15px] border-b-[8px] border-l-transparent border-r-transparent  border-b-white transform -translate-x-1/2 w-0 h-0"
+                  className="absolute  -top-[10px] left-1/2 border-l-[15px] border-r-[15px] border-b-[8px] border-l-transparent border-r-transparent  border-b-white transform -translate-x-1/2 w-0 h-0"
                 />
 
                 {/* Dropdown panel */}
@@ -142,11 +142,11 @@ function CommonNavbar({ loginmenuItems, helpmenuItems }) {
               }`}
             />
             {isHelpHovered && (
-              <div className="absolute top-full left-1/2 transform -translate-x-1/2 bg-white mt-2 shadow-lg rounded-lg w-56 z-50 text-sm">
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 bg-white mt-5 shadow-lg  z-50 text-sm">
                  <div
-                  className="absolute -top-[6px] left-1/2 border-l-[15px]  border-r-[15px] border-b-[8px] border-l-transparent border-r-transparent  border-b-white transform -translate-x-1/2 w-0 h-0"
+                  className="absolute  -top-[10px] left-1/2 border-l-[15px] border-r-[15px] border-b-[8px] border-l-transparent border-r-transparent  border-b-white transform -translate-x-1/2 w-0 h-0"
                 />
-                <ul className="p-2 space-y-2 text-black font-normal">
+                <ul className="bg-white font-normal text-black shadow-md rounded-md w-56 text-sm cursor-pointer">
                   {helpmenuItems.map((item, index) => (
                     <li key={index}>
                       <a

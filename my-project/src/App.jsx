@@ -1,18 +1,23 @@
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import {BrowserRouter,Routes,Route} from "react-router-dom";
 import Login from "./pages/Login";
+import HomeLayout from "./layouts/HomeLayout";
+import LoginLayout from "./layouts/LoginLayout";
 
-function App() {
-
+export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/login" element={<Login/>} />
+        {/* Home routes */}
+        <Route element={<HomeLayout />}>
+          <Route path="/" element={<Home />} />
+        </Route>
+
+        {/* Login routes */}
+        <Route element={<LoginLayout />}>
+          <Route path="/login" element={<Login />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
 }
-
-export default App;

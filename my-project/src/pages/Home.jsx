@@ -1,5 +1,5 @@
 import Categorymenu from "../components/Categorymenu";
-import HomeNavbar from "../components/HomeNavbar";
+
 import HomeTopCaroussel from "../components/HomeTopCaroussel";
 import ProductSlider from "../components/ProductSlider";
 import shopyourfavourite from "../assets/shopyourfavriteneedsbanner.webp";
@@ -7,9 +7,7 @@ import {
   beautyFoodToys,
   categoryItems,
   electronicSlidesItem,
-  helpmenuItems,
   homeSliderItems,
-  loginmenuItems,
   sportsHealthFoodItems,
   fashionDealsItems,
   makeYourHomeStylishItems,
@@ -34,7 +32,7 @@ function Home() {
   return (
     <div className="bg-[#f5f5f5] ">
       <div>
-      <HomeNavbar loginmenuItems={loginmenuItems} helpmenuItems={helpmenuItems} />
+     
        <div className="py-2 ">
       <Categorymenu items={categoryItems} />
       <HomeTopCaroussel items={homeSliderItems} />
