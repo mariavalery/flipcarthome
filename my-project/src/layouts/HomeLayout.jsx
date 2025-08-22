@@ -7,7 +7,9 @@ export default function HomeLayout() {
   return (
     <>
       <HomeNavbar loginmenuItems={loginmenuItems} helpmenuItems={helpmenuItems} />
+      <main >
       <Outlet /> {/* child pages will appear here */}
+      </main>
     </>
   );
 }

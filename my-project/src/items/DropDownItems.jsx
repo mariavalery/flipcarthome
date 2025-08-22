@@ -274,7 +274,7 @@ export const allProductsDropDownArray = [
   },
   {
     id: crypto.randomUUID(),
-    categoryItems: {
+    category: {
       title: "Mens",
       subItems: [
         {
@@ -561,7 +561,7 @@ export const allProductsDropDownArray = [
   },
   {
     id: crypto.randomUUID(),
-    categoryItems: {
+    category: {
       title: "Baby & Kids",
       subItems: [
         {
@@ -687,7 +687,7 @@ export const allProductsDropDownArray = [
   },
   {
     id: crypto.randomUUID(),
-    categoryItems: {
+    category: {
       title: "Home & Furniture",
       subItems: [
         {
@@ -814,7 +814,7 @@ export const allProductsDropDownArray = [
   },
   {
     id: crypto.randomUUID(),
-    categoryItems: {
+    category: {
       title: "Sports, Books & More",
       subItems: [
         {
