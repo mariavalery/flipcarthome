@@ -8,7 +8,7 @@ function AllCategoryNav() {
 
   return (
     <div className="shadow-md w-full">
-      <ul className="flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-between w-full mx-auto px-2 sm:px-4">
+      <ul className="flex flex-wrap  justify-center items-center   w-full mx-auto px-2 sm:px-4">
         {allProductsDropDownArray.map((item) => {
           const isHovered = isCategoryHovered === item.id;
 
@@ -30,9 +30,9 @@ function AllCategoryNav() {
                   }`}
                 >
                   <svg
-                    width="12"
-                    className={`w-3 h-3 sm:w-4 sm:h-4 ${
-                      isHovered ? "text-blue-500" : "text-gray-900"
+                    width="13"
+                    className={`w-3 h-2  ${
+                      isHovered ? "text-blue-500" : "text-gray-400"
                     }`}
                     height="10"
                     viewBox="0 0 14 11"
@@ -43,8 +43,8 @@ function AllCategoryNav() {
                       <path
                         d="M3 2L7 6L11 2"
                         stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
                       />
                     </g>
                     <defs>
@@ -55,10 +55,10 @@ function AllCategoryNav() {
                         width="13.5"
                         height="9.8125"
                         filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB"
+                        colorInterpolationFilters="sRGB"
                       >
                         <feFlood
-                          flood-opacity="0"
+                          floodOpacity="0"
                           result="BackgroundImageFix"
                         />
                         <feColorMatrix
