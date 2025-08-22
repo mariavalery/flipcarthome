@@ -8,7 +8,7 @@ function AllCategoryNav() {
 
   return (
     <div className="shadow-md w-full">
-      <ul className="flex flex-wrap  justify-center items-center   w-full mx-auto px-2 sm:px-4">
+      <ul className="flex flex-wrap justify-center items-center  mx-auto px-2 sm:px-4">
         {allProductsDropDownArray.map((item) => {
           const isHovered = isCategoryHovered === item.id;
 
