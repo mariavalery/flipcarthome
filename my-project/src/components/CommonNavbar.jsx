@@ -22,12 +22,12 @@ function CommonNavbar({ loginmenuItems, helpmenuItems }) {
     };
   }, []);
   return (
-    <nav className="fixed top-0 left-0 z-10 w-full h-[56px] text-[10px] bg-[#2874f0] text-[#f0f0f0] flex items-center gap-2 ">
-      <div className="min-w-[30px] md:min-w-[120px]" />
+    <nav className="fixed top-0 left-0  z-10 w-full h-[56px] text-[10px] bg-[#2874f0] text-[#f0f0f0] justify-center flex items-center gap-2 ">
+      <div  />
 
-      <div className="flex items-center w-full ">
+      <div className="flex md:justify-center  items-center w-full  ">
         {/* Logo Section */}
-        <div className="flex flex-col flex-wrap md:flex-nowrap md:m-8 m-1 flex-shrink-0">
+        <div className="flex flex-col  md:flex-nowrap md:m-8 m-1 flex-shrink-0 ">
           <a href="/">
             <img src={commonflipkartlogo} className="md:w-20 w-10" />
           </a>
@@ -44,7 +44,7 @@ function CommonNavbar({ loginmenuItems, helpmenuItems }) {
         <div
           ref={searchWrapper}
           onFocus={() => setIsSearchOpen(true)}
-          className="relative  w-full max-w-60 md:max-w-xl m-1 flex-1 "
+          className="relative  w-full max-w-30 md:max-w-sm m-1 flex-1 "
         >
           <div className=" bg-white px-1 py-1 rounded flex items-center">
             <input
