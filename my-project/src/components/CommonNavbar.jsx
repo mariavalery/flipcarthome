@@ -22,21 +22,19 @@ function CommonNavbar({ loginmenuItems, helpmenuItems }) {
     };
   }, []);
   return (
-    <nav className="fixed top-0 left-0  z-10 w-full h-16 text-[10px] bg-[#2874f0] text-[#f0f0f0] justify-center flex items-center md:gap-3 ">
-      <div  />
-
-      <div className="flex md:justify-center  items-center w-full md:gap-6 ">
+    <nav className="fixed top-0 z-10 md:w-full h-12 md:h-14 bg-[#2874f0] text-[#f0f0f0]  flex justify-center items-center   ">
+      <div className="flex w-full h-4 md:h-8 items-center justify-center px-2 md:px-6 ">
         {/* Logo Section */}
         <div className="flex flex-col  md:flex-nowrap md:m-8 m-1 flex-shrink-0 ">
           <a href="/">
-            <img src={commonflipkartlogo} className="w-10 h-2 md:w-14 md:h-6 " />
+            <img src={commonflipkartlogo} className="w-12 h-4 md:w-16 md:h-8 object-contain " />
           </a>
-          <div className="flex items-center">
-            <a href="/" className="hover:border-b border-white text-[8px] md:text-xs">
+          <div className="flex items-center text-[6px] md:text-xs">
+            <a href="/" className="hover:border-b border-white ">
               Explore
               <span className="text-yellow-500 font-serif px-1">Plus</span>
             </a>
-            <img src={pluslogo} className="w-2 md:w-4" />
+            <img src={pluslogo} className="w-2 h-2 md:w-4 md:h-4" />
           </div>
         </div>
 
@@ -44,17 +42,17 @@ function CommonNavbar({ loginmenuItems, helpmenuItems }) {
         <div
           ref={searchWrapper}
           onFocus={() => setIsSearchOpen(true)}
-          className="relative  max-w-20 h-8 md:max-w-sm m-1 flex-1 "
+          className="relative  max-w-40 h-4 md:h-8  md:max-w-lg mb-1 mr-1 flex-1 "
         >
           <div className=" bg-white px-1 py-1 rounded flex items-center">
             <input
               placeholder="Search for Products and More"
               title="Search for Products and More"
-              className="w-full outline-none text-sm text-black px-2"
+              className="w-full  outline-none text-[8px] md:text-[14px]  text-black "
             />
-            <button className="px-1 w-6">
+            <button className="px-1 w-5">
               <svg
-                className="w-2 h-2 md:h-6 md:w-6"
+                className="w-2 h-2 md:h-4 md:w-4"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -81,10 +79,10 @@ function CommonNavbar({ loginmenuItems, helpmenuItems }) {
         </div>
 
         {/* Right Section */}
-        <div className=" flex items-center gap-2 md:gap-6 font-bold text-[10px] md:text-sm whitespace-nowrap flex-shrink-0 mr-1 ">
-          <div className="relative">
+        <div className=" flex items-center h-4 md:h-8 gap-2 font-bold text-[6px] md:text-sm whitespace-nowrap flex-shrink-0 ">
+          <div className="relative h-4 md:h-8">
             <button
-              className=" flex text-[#5f4eeb]  bg-white px-2 md:px-8 py-1 rounded"
+              className=" flex text-[#5f4eeb]  bg-white px-2 md:px-6 py-1 "
               onMouseEnter={() => setIsLoginHovered(true)}
               onMouseLeave={() => setIsLoginHovered(false)}
             >
@@ -130,7 +128,7 @@ function CommonNavbar({ loginmenuItems, helpmenuItems }) {
 
           <span className="inline ">Become a Seller</span>
           <div
-            className="relative flex top-full left-0"
+            className="relative flex  left-0"
             onMouseEnter={() => setIsHelpHovered(true)}
             onMouseLeave={() => setIsHelpHovered(false)}
           >
