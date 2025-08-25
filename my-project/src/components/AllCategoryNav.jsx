@@ -8,15 +8,15 @@ function AllCategoryNav() {
 
   return (
     <div className="shadow-md w-full">
-      <ul className="flex flex-wrap justify-center items-center  mx-auto px-2 sm:px-4">
+      <div className="flex flex-nowrap md:justify-center items-center px-1">
         {allProductsDropDownArray.map((item) => {
           const isHovered = isCategoryHovered === item.id;
 
           return (
-            <li
+            <div
               key={item.id}
-              className={`flex items-center font-semibold px-2 sm:px-4 py-2 cursor-pointer 
-                text-sm sm:text-base`}
+              className={`flex  justify-start items-center font-bold h-5 md:h-7 md:px-2 cursor-pointer 
+                md:text-sm text-[5px] whitespace-nowrap`}
               onMouseEnter={() => setisCategoryHovered(item.id)}
               onMouseLeave={() => setisCategoryHovered(null)}
             >
@@ -25,13 +25,13 @@ function AllCategoryNav() {
               </span>
               {item?.category?.subItems.length > 0 && (
                 <span
-                  className={`ml-1 transition-transform duration-100 ${
+                  className={`ml-[2px] md:ml-1 transition-transform duration-100 ${
                     isHovered ? "rotate-180" : ""
                   }`}
                 >
                   <svg
                     width="13"
-                    className={`w-3 h-2  ${
+                    className={`md:w-3 md:h-2 w-[2px] h-[2px] ${
                       isHovered ? "text-blue-500" : "text-gray-400"
                     }`}
                     height="10"
@@ -89,10 +89,10 @@ function AllCategoryNav() {
                   </svg>
                 </span>
               )}
-            </li>
+            </div>
           );
         })}
-      </ul>
+      </div>
     </div>
   );
 }
