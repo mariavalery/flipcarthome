@@ -2,12 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import commonflipkartlogo from "../assets/common nav icons/common flipkart logo.png";
 import pluslogo from "../assets/common nav icons/plus logo.png";
 import SearchAutoSuggestion from "../components/SearchAutoSuggestion";
-import arrowupicon from "../assets/arrowupicon.svg";
-import arrowdowniconwhite from "../assets/arrowdowniconwhite.svg";
 function CommonNavbar({ loginmenuItems, helpmenuItems }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isLoginHovered, setIsLoginHovered] = useState(false);
   const [isHelpHovered, setIsHelpHovered] = useState(false);
+
   const searchWrapper = useRef(null);
 
   useEffect(() => {
@@ -27,7 +26,10 @@ function CommonNavbar({ loginmenuItems, helpmenuItems }) {
         {/* Logo Section */}
         <div className="flex flex-col  md:flex-nowrap md:m-8 m-1 flex-shrink-0 ">
           <a href="/">
-            <img src={commonflipkartlogo} className="w-12 h-4 md:w-16 md:h-8 object-contain " />
+            <img
+              src={commonflipkartlogo}
+              className="w-12 h-4 md:w-16 md:h-8 object-contain "
+            />
           </a>
           <div className="flex items-center text-[6px] md:text-xs">
             <a href="/" className="hover:border-b border-white ">
@@ -58,7 +60,6 @@ function CommonNavbar({ loginmenuItems, helpmenuItems }) {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                 
                   d="M10.5 18C14.6421 18 18 14.6421 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18Z"
                   stroke="blue"
                   strokeWidth="2"
@@ -92,9 +93,7 @@ function CommonNavbar({ loginmenuItems, helpmenuItems }) {
             {isLoginHovered && (
               <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 z-50">
                 {/* Triangle */}
-                <div
-                  className="absolute  -top-[10px] left-1/2 border-l-[15px] border-r-[15px] border-b-[8px] border-l-transparent border-r-transparent  border-b-white transform -translate-x-1/2 w-0 h-0"
-                />
+                <div className="absolute  -top-[10px] left-1/2 border-l-[15px] border-r-[15px] border-b-[8px] border-l-transparent border-r-transparent  border-b-white transform -translate-x-1/2 w-0 h-0" />
 
                 {/* Dropdown panel */}
                 <div className="bg-white shadow-md rounded-md w-56 text-sm cursor-pointer">
@@ -128,22 +127,76 @@ function CommonNavbar({ loginmenuItems, helpmenuItems }) {
 
           <span className="inline ">Become a Seller</span>
           <div
-            className="relative flex  left-0"
+            className="relative flex items-center left-0"
             onMouseEnter={() => setIsHelpHovered(true)}
             onMouseLeave={() => setIsHelpHovered(false)}
           >
-              <span>More</span>
-              <img
-              src={isHelpHovered ? arrowupicon : arrowdowniconwhite}
-              className={`ml-1  transition-transform duration-100 ${
-                isHelpHovered ? "rotate-180" : ""
-              }`}
-            />
+            <span>More</span>
+              <span
+                  className={`ml-[2px] md:ml-1 transition-transform duration-100 ${
+                    isHelpHovered ? "rotate-180" : ""
+                  }`}
+                >
+                   <svg
+              className="md:h-7 md:w-3 h-2 w-1"
+              width="14"
+              height="11"
+              viewBox="0 0 14 11"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g filter="url(#filter0_d_4974_75969)">
+                <path
+                  d="M3 2L7 6L11 2"
+                  stroke="#ffffff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </g>
+              <defs>
+                <filter
+                  id="filter0_d_4974_75969"
+                  x="0.25"
+                  y="0.25"
+                  width="13.5"
+                  height="9.8125"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset dy="1" />
+                  <feGaussianBlur stdDeviation="1" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="BackgroundImageFix"
+                    result="effect1_dropShadow_4974_75969"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="effect1_dropShadow_4974_75969"
+                    result="shape"
+                  />
+                </filter>
+              </defs>
+            </svg>
+                </span>
+              
+           
+          
             {isHelpHovered && (
               <div className="absolute top-full left-1/2 transform -translate-x-1/2 bg-white mt-5 shadow-lg  z-50 text-sm">
-                 <div
-                  className="absolute  -top-[10px] left-1/2 border-l-[15px] border-r-[15px] border-b-[8px] border-l-transparent border-r-transparent  border-b-white transform -translate-x-1/2 w-0 h-0"
-                />
+                <div className="absolute  -top-[10px] left-1/2 border-l-[15px] border-r-[15px] border-b-[8px] border-l-transparent border-r-transparent  border-b-white transform -translate-x-1/2 w-0 h-0" />
                 <ul className="bg-white font-normal text-black shadow-md rounded-md w-56 text-sm cursor-pointer">
                   {helpmenuItems.map((item, index) => (
                     <li key={index}>
@@ -160,8 +213,6 @@ function CommonNavbar({ loginmenuItems, helpmenuItems }) {
                 </ul>
               </div>
             )}
-          
-            
           </div>
           <div className="hidden md:inline-flex items-center">
             <svg

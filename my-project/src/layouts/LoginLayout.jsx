@@ -5,7 +5,7 @@ import FooterCopyright from "../components/FooterCopyright";
 
 export default function LoginLayout() {
   return (
-    <div className="flex flex-col min-h-screen"> {/* full height flex container */}
+    <div className="flex flex-col w-80 md:w-full min-h-screen"> {/* full height flex container */}
       
       {/* Navbar */}
       <CommonNavbar

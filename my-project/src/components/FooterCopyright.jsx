@@ -76,9 +76,9 @@ function FooterCopyright() {
               </div>
              ))}
           </div>
-          <div className="flex md:gap-8 gap-1 md:mx-2">
+          <div className="flex md:gap-8 gap-1 md:mx-2 ">
              <span className="whitespace-nowrap">© 2007-2025 <span>Flipkart.com</span></span> 
-             <img src={paymentcards} />
+             <img src={paymentcards} className="md:w-80 w-32 object-contain"/>
           </div>
          </div>
           </div>

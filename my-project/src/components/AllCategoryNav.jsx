@@ -8,14 +8,14 @@ function AllCategoryNav() {
 
   return (
     <div className="shadow-md w-full">
-      <div className="flex flex-nowrap md:justify-center items-center px-1">
+      <div className="flex flex-nowrap md:justify-center items-center md:gap-4 px-1">
         {allProductsDropDownArray.map((item) => {
           const isHovered = isCategoryHovered === item.id;
 
           return (
             <div
               key={item.id}
-              className={`flex  justify-start items-center font-bold h-5 md:h-7 md:px-2 cursor-pointer 
+              className={`flex  justify-start items-center font-semibold  h-5 md:h-7 md:px-2 cursor-pointer 
                 md:text-sm text-[5px] whitespace-nowrap`}
               onMouseEnter={() => setisCategoryHovered(item.id)}
               onMouseLeave={() => setisCategoryHovered(null)}
